@@ -1,0 +1,495 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Peruskäsitteitä &#8212; Tilastot ja todennäköisyys</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Normaalijakauman luottamusvälit" href="luottamusvalit_normaali.html" />
+    <link rel="prev" title="Normaalijakauma" href="normaali.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Tilastot ja todennäköisyys</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Tilastot ja todennäköisyys
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Tilastotiedettä
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="muuttujat.html">
+   Tilastolliset muuttujat
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="jakaumat.html">
+   Tilastolliset jakaumat
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tunnusluvut.html">
+   Tunnuslukuja
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Mallin sovitus dataan
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="malli_intro.html">
+   Johdantoa
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lineaarinen.html">
+   Lineaarinen malli
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lineaarinen2.html">
+   Kahden muuttujan lineaarinen malli
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="polynomi.html">
+   Polynomimalli
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="eksponentti.html">
+   Eksponenttimalli
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="logaritmi.html">
+   Logaritmimalli
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="arviointi.html">
+   Mallin arviointi
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Todennäköisyys
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="perusteet.html">
+   Perusteita
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="laskusaantoja.html">
+   Laskusääntöjä
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="kombinatoriikka.html">
+   Kombinatoriikkaa
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Jakaumia
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="jakaumat_intro.html">
+   Johdantoa
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="diskreetit.html">
+   Diskreetti jakauma
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="binomi.html">
+   Binomijakauma
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="jatkuvat.html">
+   Jatkuvat jakaumat
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="normaali.html">
+   Normaalijakauma
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Tilastollinen testaus
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Peruskäsitteitä
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="luottamusvalit_normaali.html">
+   Normaalijakauman luottamusvälit
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="luottamusvalit_t.html">
+   t-jakauman luottamusvälit
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="luottamusvalit_prosentti.html">
+   Prosenttiosuuden luottamusväli
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  <a href="https://jupyterbook.org">Jupyter Book</a> voimaa
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/testaus_intro.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/luma-lapinamk/minna-tiltod"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#keskeinen-raja-arvolause">
+   Keskeinen raja-arvolause
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#keskiarvon-keskivirhe">
+   Keskiarvon keskivirhe
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#luottamustaso-ja-virhemarginaalit">
+   Luottamustaso ja virhemarginaalit
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Peruskäsitteitä</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#keskeinen-raja-arvolause">
+   Keskeinen raja-arvolause
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#keskiarvon-keskivirhe">
+   Keskiarvon keskivirhe
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#luottamustaso-ja-virhemarginaalit">
+   Luottamustaso ja virhemarginaalit
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="peruskasitteita">
+<h1>Peruskäsitteitä<a class="headerlink" href="#peruskasitteita" title="Permalink to this headline">¶</a></h1>
+<p>Aiemmin on jo todettu, että kun havainnoitava perusjoukko eli populaatio on hyvin suuri, käytetään otantaa haluttaessa arvioida populaation ominaisuuksia. Esimerkiksi jos halutaan selvittää suomalaisten keskimääräistä viikoittain liikuntaan käytettyä aikaa, ei käydä kysymässä asiaa jokaiselta erikseen, vaan valitaan tutkimukseen joukko, jonka perusteella tulos voidaan yleistää. Ideaalisin otantamenetelmä on satunnaisotanta, jossa jokainen perusjoukon jäsen voidaan valita yhtä todennäköisesti otokseen.</p>
+<p>Tilastotieteessä pätevät seuraavat säännöt:</p>
+<ol class="simple">
+<li><p>Jos populaatiosta, jonka mitatut arvot voivat olla miten tahansa jakautuneet, otetaan kaikki mahdolliset osajoukkojen kombinaatiot ja lasketaan näiden osajoukkojen keskiarvojen keskiarvo, se on aina sama kuin populaation keskiarvo, vaikka yhden osajoukon keskiarvo voi erota siitä hyvinkin suuresti.</p></li>
+<li><p>Riippumattomasti valittujen otosten keskiarvojen <span class="math notranslate nohighlight">\(\mu_i\)</span> muodostama jakauma on normaalisti jakautunut riippumatta siitä, onko populaatiossa kyseinen ominaisuus normaalisti jakautunut vai ei.</p></li>
+</ol>
+<div class="section" id="keskeinen-raja-arvolause">
+<h2>Keskeinen raja-arvolause<a class="headerlink" href="#keskeinen-raja-arvolause" title="Permalink to this headline">¶</a></h2>
+<p>Merkitään: <span class="math notranslate nohighlight">\(X\)</span> on jokin populaation (mitattava) ominaisuus ja <span class="math notranslate nohighlight">\(X_i\)</span>:t ovat populaatiosta riippumattomasti mitattuja havaintoja muuttujasta <span class="math notranslate nohighlight">\(X\)</span>. Merkitään lisäksi: populaation keskiarvo on <span class="math notranslate nohighlight">\(\bar{X}\)</span>, keskihajonta on <span class="math notranslate nohighlight">\(\sigma\)</span> ja varianssi on <span class="math notranslate nohighlight">\(\sigma^2\)</span>.</p>
+<p>Keskeisen raja-arvolauseen mukaan havaintojen keskiarvo <span class="math notranslate nohighlight">\(\bar{X}\)</span> on normaalisti jakautunut keskiarvona <span class="math notranslate nohighlight">\(\mu\)</span> ja keskihajontana <span class="math notranslate nohighlight">\(\frac{\sigma}{\sqrt{n}}\)</span>, siis</p>
+<p><span class="math notranslate nohighlight">\(\bar{X}=\frac{1}{n} \sum_{i=1}^n X_i \sim N\left(\mu, \frac{\sigma}{\sqrt{n}}\right)\)</span>.</p>
+<p>Toisin sanoen minkä tahansa jakauman otoskeskiarvot noudattavat normaalijakaumaa, jolloin populaation keskiarvoon liittyvissä tilastollisissa päättelyissä voidaan käyttää normaalijakaumaa. Lisäksi otoskeskiarvot ovat jo suhteellisen pienillä määrillä normaalisti jakautuneet, jolloin populaation keskiarvosta saadaan luotettavia estimaatteja.</p>
+<p>Usein perusjoukon keskihajonta <span class="math notranslate nohighlight">\(\sigma\)</span> ei ole tiedossa eikä sitä voida selvittää. Sen sijaan otoksesta keskihajonta on helppoa laskea. Tällöin populaation keskihajontaa arvioidaan otoskeskihajonnalla</p>
+<p><span class="math notranslate nohighlight">\(s=\sqrt{\frac{\sum_{i=1}^n (X_i-\bar{X})^2}{n-1}}\)</span></p>
+<p></p>
+</div>
+<div class="section" id="keskiarvon-keskivirhe">
+<h2>Keskiarvon keskivirhe<a class="headerlink" href="#keskiarvon-keskivirhe" title="Permalink to this headline">¶</a></h2>
+<p>Keskiarvojen keskihajontaa <span class="math notranslate nohighlight">\(\frac{\sigma}{\sqrt{n}}\)</span> kutsutaan keskiarvon keskivirheeksi (standard error, SE). Sitä käytetään, kun halutaan  muodostaa otoksen perusteella jollekin perusjoukon ominaisuudelle arvio virherajoineen. Otoksen keskivirheen avulla voidaan laskea todennäköisyys, että populaation keskiarvo <span class="math notranslate nohighlight">\(\mu\)</span> on välillä</p>
+<p><span class="math notranslate nohighlight">\(X-\frac{\sigma}{\sqrt{n}} \leq \mu \leq X + \frac{\sigma}{\sqrt{n}}\)</span></p>
+<p>Koska otoksen keskiarvo noudattaa normaalijakaumaa <span class="math notranslate nohighlight">\(N\left(\mu, \frac{\sigma}{\sqrt{n}}\right)\)</span>, todennäköisyys ylläolevalle voidaan laskea kyseisen jakauman avulla seuraavasti:</p>
+<p><span class="math notranslate nohighlight">\(P(X-\frac{\sigma}{\sqrt{n}} \leq \mu \leq X + \frac{\sigma}{\sqrt{n}})=P(-1 \leq z \leq 1)=0.68\)</span>,</p>
+<p>missä <span class="math notranslate nohighlight">\(z \sim N(0,1)\)</span>.</p>
+<p>Lukua 0.68 tai 68 % kutsutaan luottamustasoksi: siis 68 % luottamustasolla voidaan sanoa, että populaation todellinen keskiarvo on luvun <span class="math notranslate nohighlight">\(\frac{\sigma}{\sqrt{n}}\)</span> etäisyydellä otoksen keskiarvosta. Lukuväliä <span class="math notranslate nohighlight">\(X-\frac{\sigma}{\sqrt{n}} \ldots \leq X + \frac{\sigma}{\sqrt{n}}\)</span> sanotaan luottamusväliksi.</p>
+<p><strong>Esim.</strong> Tehtaassa valmistettavien jauhopussien painolle haluttiin arvioida virherajat käyttämällä keskiarvon keskivirhettä. Otokseen valittiin satunnaisesti 10 pussia, joiden keskipaino oli 995 g ja keskihajonta 22.6 g. Esitä arvioitu pussin keskipaino virherajoineen.</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Ratkaisu</p>
+<p>Otoskoko: <span class="math notranslate nohighlight">\(n=10\)</span> kpl, otoskeskiarvo: <span class="math notranslate nohighlight">\(\bar{X}=995\)</span> g, keskihajonta <span class="math notranslate nohighlight">\(\sigma=22.6\)</span> g.</p>
+<p>Keskiarvon keskivirhe on <span class="math notranslate nohighlight">\(\frac{\sigma}{\sqrt{n}}=\frac{22.6~\text{g}}{\sqrt{10}} = 7.15~\text{g}\)</span>.</p>
+<p>Keskipaino on siis <span class="math notranslate nohighlight">\(\mu=\bar{X} \pm \frac{\sigma}{\sqrt{n}} = 995~\text{g} \pm 7~\text{g}\)</span>.</p>
+<p>Luottamusväli on noin 988 g … 1002 g.</p>
+</div>
+<p></p>
+</div>
+<div class="section" id="luottamustaso-ja-virhemarginaalit">
+<h2>Luottamustaso ja virhemarginaalit<a class="headerlink" href="#luottamustaso-ja-virhemarginaalit" title="Permalink to this headline">¶</a></h2>
+<p>Edellä luottamustaso, joka määriteltiin keskiarvon keskivirheen avulla, oli suuruudeltaan 68 %. Tilastollisessa analyysissa halutaan usein arvioida populaation jonkin ominaisuuden keskiarvoa paljon suuremmalla luottamustasolla, esimerkiksi 95 % tai 99 %.</p>
+<p>Yleisesti luottamusväliä merkitään <span class="math notranslate nohighlight">\((X-\Delta, X+\Delta)\)</span>. Merkintä <span class="math notranslate nohighlight">\(\Delta\)</span> on niin sanottu virhemarginaali. Populaation mitattavan ominaisuuden todellinen keskiarvo on siis luottamustason mukaisella todennäköisyydellä enintään virhemarginaalin etäisyydellä otoksen perusteella lasketusta keskiarvosta.</p>
+<p>Merkitsevyystasoksi kutsutaan luottamusvälin komplementtitapauksen “luottamusväli ei sisällä perusjoukon keskiarvoa” todennäköisyyttä. Yleensä merkitsevyystasoon viitataan kirjaimella <span class="math notranslate nohighlight">\(\alpha\)</span>, jolloin luottamustasoa merkitään lausekkeella <span class="math notranslate nohighlight">\(1-\alpha\)</span>. Luottamustasona hyvin yleisesti käytetään 95 %, jolloin merkitsevyystaso on 5 %.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="normaali.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Normaalijakauma</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="luottamusvalit_normaali.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Normaalijakauman luottamusvälit</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By LUMA-tiimi, Lapin AMK / Minna Korhonen<br/>
+    
+        &copy; Copyright 2022.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

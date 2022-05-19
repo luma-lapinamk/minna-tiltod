@@ -1,0 +1,482 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kahden muuttujan lineaarinen malli &#8212; Tilastot ja todennäköisyys</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Polynomimalli" href="polynomi.html" />
+    <link rel="prev" title="Lineaarinen malli" href="lineaarinen.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Tilastot ja todennäköisyys</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Tilastot ja todennäköisyys
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Tilastotiedettä
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="muuttujat.html">
+   Tilastolliset muuttujat
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="jakaumat.html">
+   Tilastolliset jakaumat
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tunnusluvut.html">
+   Tunnuslukuja
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Mallin sovitus dataan
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="malli_intro.html">
+   Johdantoa
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lineaarinen.html">
+   Lineaarinen malli
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Kahden muuttujan lineaarinen malli
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="polynomi.html">
+   Polynomimalli
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="eksponentti.html">
+   Eksponenttimalli
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="logaritmi.html">
+   Logaritmimalli
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="arviointi.html">
+   Mallin arviointi
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Todennäköisyys
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="perusteet.html">
+   Perusteita
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="laskusaantoja.html">
+   Laskusääntöjä
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="kombinatoriikka.html">
+   Kombinatoriikkaa
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Jakaumia
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="jakaumat_intro.html">
+   Johdantoa
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="diskreetit.html">
+   Diskreetti jakauma
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="binomi.html">
+   Binomijakauma
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="jatkuvat.html">
+   Jatkuvat jakaumat
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="normaali.html">
+   Normaalijakauma
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Tilastollinen testaus
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="testaus_intro.html">
+   Peruskäsitteitä
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="luottamusvalit_normaali.html">
+   Normaalijakauman luottamusvälit
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="luottamusvalit_t.html">
+   t-jakauman luottamusvälit
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="luottamusvalit_prosentti.html">
+   Prosenttiosuuden luottamusväli
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  <a href="https://jupyterbook.org">Jupyter Book</a> voimaa
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/lineaarinen2.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/luma-lapinamk/minna-tiltod"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Kahden muuttujan lineaarinen malli</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="kahden-muuttujan-lineaarinen-malli">
+<h1>Kahden muuttujan lineaarinen malli<a class="headerlink" href="#kahden-muuttujan-lineaarinen-malli" title="Permalink to this headline">¶</a></h1>
+<p>Joskus yksi muuttuja ei riitä selittämään ilmiötä. Esimerkiksi asunnon vuokraan vaikuttaa ainakin asunnon koko, sijainti ja kunto, ehkäpä myös saunan tai parvekkeen olemassaolo. Keskitytään tässä kahden muuttujan malliin. Tällöin voitaisiin tutkia esimerkiksi, miten asunnon pinta-ala ja etäisyys keskustasta vaikuttavat sen vuokraan, mutta jätettäisiin muut asiat huomiotta.</p>
+<p>Kahden muuttujan lineaarinen malli on muotoa <span class="math notranslate nohighlight">\(y=ax_1+bx_2+c\)</span>. Seuraavassa esimerkissä tarkastellaan, miten mittarilukema ja vuosimalli vaikuttavat käytetyn auton hintaan, kun autot ovat muuten samanlaisia. Taulukossa on (kuvitteellisia) autojen tietoja. Muuttujana <span class="math notranslate nohighlight">\(x_1\)</span> on mittarilukema (km) ja muuttuja <span class="math notranslate nohighlight">\(x_2\)</span> on vuosimalli.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(x_1\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(x_2\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(y\)</span> (€)</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(x_1\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(x_2\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(y\)</span> (€)</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(x_1\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(x_2\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(y\)</span> (€)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>238000</p></td>
+<td><p>2009</p></td>
+<td><p>7900</p></td>
+<td><p>258000</p></td>
+<td><p>2006</p></td>
+<td><p>4470</p></td>
+<td><p>166000</p></td>
+<td><p>2010</p></td>
+<td><p>9500</p></td>
+</tr>
+<tr class="row-odd"><td><p>194000</p></td>
+<td><p>2007</p></td>
+<td><p>7900</p></td>
+<td><p>325000</p></td>
+<td><p>2007</p></td>
+<td><p>5900</p></td>
+<td><p>127000</p></td>
+<td><p>2006</p></td>
+<td><p>6900</p></td>
+</tr>
+<tr class="row-even"><td><p>165000</p></td>
+<td><p>2010</p></td>
+<td><p>8700</p></td>
+<td><p>197000</p></td>
+<td><p>2005</p></td>
+<td><p>4800</p></td>
+<td><p>153000</p></td>
+<td><p>2005</p></td>
+<td><p>6500</p></td>
+</tr>
+<tr class="row-odd"><td><p>135000</p></td>
+<td><p>2011</p></td>
+<td><p>9200</p></td>
+<td><p>250000</p></td>
+<td><p>2004</p></td>
+<td><p>4300</p></td>
+<td><p>210000</p></td>
+<td><p>2005</p></td>
+<td><p>5900</p></td>
+</tr>
+<tr class="row-even"><td><p>167000</p></td>
+<td><p>2012</p></td>
+<td><p>9900</p></td>
+<td><p>141000</p></td>
+<td><p>2010</p></td>
+<td><p>10000</p></td>
+<td><p>165000</p></td>
+<td><p>2013</p></td>
+<td><p>10500</p></td>
+</tr>
+</tbody>
+</table>
+<p>Vasemmassa kuvassa on tarkasteltu hintaa pelkästään vuosimallin funktiona, oikeassa taas pelkästään mittarilukeman funktiona. Kummallakin ominaisuudella on selvästi vaikutusta. Yhteisvaikutusta ei kuitenkaan voi päätellä kuvaajista, joissa ominaisuuksia on tarkasteltu erikseen, vaan on tehtävä kahden muuttujan mallin sovitus.</p>
+<p><img alt="Kahden muuttujan malli, esim." src="_images/2lin1.png" /></p>
+<p>Excelin LINREGR -funktiolla voidaan etsiä kertoimet myös sellaiselle lineaariselle mallille, joka on muotoa <span class="math notranslate nohighlight">\(y=ax_1+bx_2+c\)</span>. Mallin rakentamista harjoitellaan oppitunnilla. Analyyttisen geometrian mielessä tällainen yhtälö kuvaa tasoa, ei suoraa. Niinpä mallia ei voikaan esittää piirtämällä datan joukkoon suora. Jotkut ohjelmat kuitenkin osaavat tehdä mallia vastaavan kolmiulotteisen kaavion, jossa mallin mukaan laskettu <span class="math notranslate nohighlight">\(y\)</span>:n arvo esitetään pinnan korkeuden avulla.</p>
+<p>Jos alkuperäisen datan haluaa esittää kaksiuloitteisena kuvaajana, pitää luvun <span class="math notranslate nohighlight">\(y\)</span> suuruus esittää vaikkapa datapisteen koon tai värin avulla, sillä molemmat kuvaajan akselit ovat jo varattu muuttujille <span class="math notranslate nohighlight">\(x_1\)</span> ja <span class="math notranslate nohighlight">\(x_2\)</span>. Alla on edellisen kuvan kaksi datasarjaa yhdistettynä kuplakaavioksi. Mitä suurempi on kuplan koko, sitä enemmän auto maksaa. Kuvassa ei näy dataan sovitettua kahden muuttujan lineaarista mallia.</p>
+<p><img alt="Kahden muuttujan malli kuvaajana" src="_images/2lin2.png" /></p>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="lineaarinen.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Lineaarinen malli</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="polynomi.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Polynomimalli</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By LUMA-tiimi, Lapin AMK / Minna Korhonen<br/>
+    
+        &copy; Copyright 2022.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
