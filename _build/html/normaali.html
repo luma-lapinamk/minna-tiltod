@@ -1,0 +1,566 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Normaalijakauma &#8212; Tilastot ja todennäköisyys</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Peruskäsitteitä" href="testaus_intro.html" />
+    <link rel="prev" title="Jatkuvat jakaumat" href="jatkuvat.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Tilastot ja todennäköisyys</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Tilastot ja todennäköisyys
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Tilastotiedettä
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="muuttujat.html">
+   Tilastolliset muuttujat
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="jakaumat.html">
+   Tilastolliset jakaumat
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tunnusluvut.html">
+   Tunnuslukuja
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Mallin sovitus dataan
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="malli_intro.html">
+   Johdantoa
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lineaarinen.html">
+   Lineaarinen malli
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lineaarinen2.html">
+   Kahden muuttujan lineaarinen malli
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="polynomi.html">
+   Polynomimalli
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="eksponentti.html">
+   Eksponenttimalli
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="logaritmi.html">
+   Logaritmimalli
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="arviointi.html">
+   Mallin arviointi
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Todennäköisyys
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="perusteet.html">
+   Perusteita
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="laskusaantoja.html">
+   Laskusääntöjä
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="kombinatoriikka.html">
+   Kombinatoriikkaa
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Jakaumia
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="jakaumat_intro.html">
+   Johdantoa
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="diskreetit.html">
+   Diskreetti jakauma
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="binomi.html">
+   Binomijakauma
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="jatkuvat.html">
+   Jatkuvat jakaumat
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Normaalijakauma
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Tilastollinen testaus
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="testaus_intro.html">
+   Peruskäsitteitä
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="luottamusvalit_normaali.html">
+   Normaalijakauman luottamusvälit
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="luottamusvalit_t.html">
+   t-jakauman luottamusvälit
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="luottamusvalit_prosentti.html">
+   Prosenttiosuuden luottamusväli
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  <a href="https://jupyterbook.org">Jupyter Book</a> voimaa
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/normaali.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/luma-lapinamk/minna-tiltod"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tiheysfunktio-ja-kertymafunktio">
+   Tiheysfunktio ja kertymäfunktio
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kaanteinen-normaalijakauma">
+   Käänteinen normaalijakauma
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#noudattaako-aineisto-normaalijakaumaa">
+   Noudattaako aineisto normaalijakaumaa?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#normitettu-normaalijakauma">
+   Normitettu normaalijakauma
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#binomijakaumasta-normaalijakaumaksi">
+   Binomijakaumasta normaalijakaumaksi
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Normaalijakauma</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tiheysfunktio-ja-kertymafunktio">
+   Tiheysfunktio ja kertymäfunktio
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kaanteinen-normaalijakauma">
+   Käänteinen normaalijakauma
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#noudattaako-aineisto-normaalijakaumaa">
+   Noudattaako aineisto normaalijakaumaa?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#normitettu-normaalijakauma">
+   Normitettu normaalijakauma
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#binomijakaumasta-normaalijakaumaksi">
+   Binomijakaumasta normaalijakaumaksi
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="normaalijakauma">
+<h1>Normaalijakauma<a class="headerlink" href="#normaalijakauma" title="Permalink to this headline">¶</a></h1>
+<p>Mietitään tilannetta, jossa poimitaan satunnaisesti havaintoarvoja, joiden tarkoituksena on arvioida jonkin ominaisuuden keskimääräistä suuruutta suuressa joukossa. Voitaisiin esimerkiksi pyrkiä selvittämään, mikä on 30-vuotiaiden keskimääräinen pituus, mittaamalla osa kyseiseen ikäluokkaan kuuluvista henkilöistä.</p>
+<p>Jotta todellisesta populaatiosta voitaisiin tehdä johtopäätöksiä saatavilla olevan aineiston perusteella, täytyy populaatiosta tehdä seuraavat oletukset:</p>
+<ol class="simple">
+<li><p>positiiviset erot keskiarvoon nähden ovat yhtä todennäköisiä kuin negatiiviset erot</p></li>
+<li><p>suuret erot ovat vähemmän todennäköisiä kuin pienet erot,</p></li>
+<li><p>havaintoarvojen keskiarvo on todennäköisin alkuperäisen joukon kyseisen ominaisuuden keskiarvo</p></li>
+</ol>
+<p>Näillä oletuksilla havaintoarvojen jakauma on symmetrinen, jolloin keskiarvo, mediaani ja moodi ovat yhtä suuret. 1800-luvulla C. F. Gauss esitteli normaalijakauman tiheysfunktion, joka sopii yllämainittuihin ehtoihin.</p>
+<div class="section" id="tiheysfunktio-ja-kertymafunktio">
+<h2>Tiheysfunktio ja kertymäfunktio<a class="headerlink" href="#tiheysfunktio-ja-kertymafunktio" title="Permalink to this headline">¶</a></h2>
+<p>Normaalijakauman tiheysfunktio määritellään sen keskiarvon ja keskihajonnan avulla. Kun satunnaismuuttuja <span class="math notranslate nohighlight">\(X\)</span> noudattaa normaalijakaumaa, jonka keskiarvo on <span class="math notranslate nohighlight">\(\mu\)</span> ja keskihajonta <span class="math notranslate nohighlight">\(\sigma\)</span>, merkitään <span class="math notranslate nohighlight">\(X \sim N(\mu,\sigma)\)</span>.</p>
+<p>Tiheysfunktion matemaattinen muoto on</p>
+<p><span class="math notranslate nohighlight">\(p(x)=\frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{1}{2} \left(\frac{x-\mu}{\sigma}\right)^2}\)</span>.</p>
+<p>Oheisessa kuvaajassa on normaalijakaumia, joilla on eri keskiarvot ja keskihajonnat.</p>
+<p><img alt="Normaalijakaumia" src="_images/normaalijakauma.png" /></p>
+<p>Kertymäfunktion arvo lasketaan aina tietokoneella. Sitä ei edes pysty laskemaan kynällä ja paperilla. Excelissä käytetään funktiota NORMAALI.JAKAUMA.</p>
+<p><strong>Esim.</strong> Jatkuva satunnaismuuttuja noudattaa normaalijakaumaa, jonka keskiarvo on 12 ja keskihajonta 0.6. Siis X ~N(12,0.6). Laske todennäköisyydet:</p>
+<p>a) <span class="math notranslate nohighlight">\(P(x &lt; 13.5)\)</span>, b) <span class="math notranslate nohighlight">\(P(x &gt; 11.2)\)</span>, c) <span class="math notranslate nohighlight">\(P(11.9 &lt; x &lt; 14.8)\)</span>.</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Ratkaisu</p>
+<p>Aluksi merkitään: <span class="math notranslate nohighlight">\(F(x)\)</span> on kertymäfunktio normaalijakaumalle <span class="math notranslate nohighlight">\(N(12,0.6)\)</span>.</p>
+<p>a) <span class="math notranslate nohighlight">\(P(x &lt; 13.5) = F(13.5)\)</span>  eli “pinta-ala vasemmalta arvoon 13.5 asti”</p>
+<p>Excel: NORMAALI.JAKAUMA(13,5;12;0,6;1), vastaus 0.994</p>
+<p>b) <span class="math notranslate nohighlight">\(P(x&gt;11.2) = 1 - P(x\leq 11.2)= 1 - F(11.2)\)</span> eli “pinta-ala arvosta 11.2 oikealle”</p>
+<p>Excel: 1-NORMAALI.JAKAUMA(11,2;12;0,6;1), vastaus 0.909</p>
+<p>c) <span class="math notranslate nohighlight">\(P(11.9 &lt; x &lt; 14.8) = F(14.8)- F(11.9)\)</span> eli “pinta-ala arvojen 11.9 ja 14.8 välillä”</p>
+<p>Excel: NORMAALI.JAKAUMA(14,8;12;0,6;1)-NORMAALI.JAKAUMA(11,9;12;0,6;1), vastaus 0.566</p>
+</div>
+<p><strong>Esim.</strong> Tehtaassa valmistettavien kilon jauhopussien painon keskiarvo oli 996 g ja vastaava keskihajonta 6.59 g. Kuinka monta prosenttia jauhopusseista oli painoltaan vähintään 995 g?</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Ratkaisu</p>
+<p><span class="math notranslate nohighlight">\(P(\text{&quot;satunnainen pussi väh. 995 g&quot;})= P (X \geq 995)=1-P(X\leq 995)=1-F(995)\)</span></p>
+<p>Excel: 1-NORMAALI.JAKAUMA(995;996;6,59;1), vastaus 0.5605 eli 56 %</p>
+</div>
+</div>
+<div class="section" id="kaanteinen-normaalijakauma">
+<h2>Käänteinen normaalijakauma<a class="headerlink" href="#kaanteinen-normaalijakauma" title="Permalink to this headline">¶</a></h2>
+<p>Usein normaalijakauman funktioita käytetään käänteisesti. Normaalijakaman käänteisfunktio muuttujan arvolla <span class="math notranslate nohighlight">\(a\)</span> etsii satunnaismuuttujan <span class="math notranslate nohighlight">\(X\)</span> sen arvon <span class="math notranslate nohighlight">\(x\)</span>, jolla toteutuu <span class="math notranslate nohighlight">\(P(X \leq x)=a\)</span>. Jos taas halutaan laskea todennäköisyyttä sille, että muuttujan arvo on enemmän kuin jokin tietty luku, käytetään jälleen komplementtiperiaatetta.</p>
+<p>Excelissä tarvittava funktio on NORMAALI.JAKAUMA.KÄÄNT, jolle annetaan parametriksi kysytty todennäköisyys tai osuus desimaalilukuna tai prosentteina sekä jakauman keskiarvo ja keskihajonta.</p>
+<p><strong>Esim.</strong> Tehtaassa valmistettavien jauhopussien painon keskiarvo oli 996 g ja vastaava keskihajonta 6.59 g. Minkä painorajan yläpuolella on 99.5 % myynnissä olevista pusseista?</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Ratkaisu</p>
+<p>On etsittävä paino <span class="math notranslate nohighlight">\(x\)</span> siten, että <span class="math notranslate nohighlight">\(P(X&gt;x) = 0.995\)</span> eli komplementtiperiaatteen nojalla <span class="math notranslate nohighlight">\(P(X&lt;x) = 0.005\)</span>.</p>
+<p>Excel: NORMAALI.JAKAUMA.KÄÄNT(0,005;996;6,59), vastaus 979 g</p>
+</div>
+<p><strong>Esim.</strong> Suomen miespuolisen väestön keskipituus on 180.7 cm ja keskihajonta 7.4. cm. Oletetaan, että pituus noudattaa normaalijakaumaa.</p>
+<p>a) Mikä on todennäköisyys sille, että mieshenkilön pituus on vähintään 213 cm?</p>
+<p>b) Mikä on se pituus, jonka pituisia tai lyhyempiä on 90 % miehistä?</p>
+<p>c) Millä todennäköisyydellä mieshenkilön pituus on välillä 190 cm … 200 cm?</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Ratkaisu</p>
+<p>a) <span class="math notranslate nohighlight">\(P(X \geq 213)= 1-P(X&lt;213)=1-F(213)\)</span></p>
+<p>Excel: =1-NORMAALI.JAKAUMA (213;180,7;7,4;1), vastaus 0.00000636 (noin 6 miestä miljoonasta)</p>
+<p>b) <span class="math notranslate nohighlight">\(P(X\leq x)=F(X)=0.90\)</span></p>
+<p>Excel: NORMAALI.JAKAUMA.KÄÄNT(0.9;180,7;7,4), vastaus 190.2 cm</p>
+<p>c) <span class="math notranslate nohighlight">\(P(190≤X≤200)=F(200)-F(190)\)</span></p>
+<p>Excel: NORMAALI.JAKAUMA(200;180,7;7,4;1)-NORMAALI.JAKAUMA(190;180,7;7,4;1), vastaus 10 %</p>
+</div>
+</div>
+<div class="section" id="noudattaako-aineisto-normaalijakaumaa">
+<h2>Noudattaako aineisto normaalijakaumaa?<a class="headerlink" href="#noudattaako-aineisto-normaalijakaumaa" title="Permalink to this headline">¶</a></h2>
+<p>Jos aineisto ei noudata normaalijakaumaa, niin ei voida käyttää normaalijakaumaan liittyviä funktioita. Muuttujan arvo, joka vastaa haluttua prosenttilukemaa, pitää tällöin etsiä PROSENTTIPISTE-funktiolla, jota on käsitelty jo aiemmin.</p>
+<p><strong>Esim.</strong> Eräs sepelimurske on kelvollista käyttötarkoitukseensa, jos enintään 2.5 % sen kivistä ylittää maksimiläpimitaltaan arvon 30 mm. Alla olevassa taulukossa on satunnaisesti valittujen 80 kivenkappaleen maksimiläpimitat työntömitalla mitattuna. Täyttääkö murske laatukriteerin? Ratkaise tehtävä kahdella tavalla:</p>
+<p>a) Oletetaan, että kyseisen murskeen kivien läpimitat noudattavat normaalijakaumaa.</p>
+<p>b) Oletetaan, että kyseisen murskeen kivien läpimitat eivät noudata normaalijakaumaa.</p>
+<p><img alt="Jakaumien käyttö, esimerkki" src="_images/murske.png" /></p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Ratkaisu</p>
+<p>Lasketaan aineistosta Excelin funktioilla keskiarvo, joka on 20.13 mm, ja keskihajonta, joka on 6.75 mm. Etsitään käänteisen normaalijakauman arvolla arvo, jota pienempiä 97.5 % kivistä on (tätä suurempia on tällöin tietenkin 2.5 % kivistä).</p>
+<p>NORMAALI.JAKAUMA.KÄÄNT(97,5%;20,13;6,75), vastaus 33.4 mm</p>
+<p>Tässä tapauksessa kannattaa hyödyntää normaalijakaumaa, sillä tiedetään, että taulukko on edustava otos normaalijakaumaa noudattavasta populaatiosta. Jos käytetään prosenttipiste-funktiota, saadaan tulokseksi 31.2 mm. Pelkästään aineiston perusteella laskettu prosenttipiste antaa murskeesta paremman vaikutelman kuin normaalijakauman käyttö.</p>
+</div>
+</div>
+<div class="section" id="normitettu-normaalijakauma">
+<h2>Normitettu normaalijakauma<a class="headerlink" href="#normitettu-normaalijakauma" title="Permalink to this headline">¶</a></h2>
+<p>Normaalijakaumiin liittyvät todennäköisyydet voidaan standardoida niin, että yksi ainoa jakauma eli normitettu normaalijakauma <span class="math notranslate nohighlight">\(N(0,1)\)</span> riittää. Aikaisemmin tämä oli tärkeää, koska laskuja ei suoritettu tietokoneella vaan paperisten taulukoiden avulla, ja vain tämän jakauman arvot oli taulukoista luettavissa. Edelleen kuitenkin normitettu jakauma on tärkeä mm. kun halutaan verrata toisiinsa sellaisia havaintoarvoja, jotka kuuluvat täysin eri jakaumiin.</p>
+<p>Satunnaismuuttujalle <span class="math notranslate nohighlight">\(X \sim N(\mu, \sigma)\)</span> normeeraus normaalijakaumaan <span class="math notranslate nohighlight">\(N(0,1)\)</span> tehdään seuraavasti:</p>
+<p>jos <span class="math notranslate nohighlight">\(X \sim N(\mu, \sigma)\)</span> niin <span class="math notranslate nohighlight">\(z=\frac{x-\mu}{\sigma}\sim N(0,1)\)</span></p>
+<p>Tiheysfunktio on tällöin <span class="math notranslate nohighlight">\(e^{-\frac{1}{2} z^2}\)</span></p>
+<p><strong>Esim.</strong> Matin pisteluku testissä, jossa keskiarvo oli 23.4 p ja keskihajonta 6.5 p, oli 33 p. Kallen pisteluku toisessa testissä, jossa keskiarvo oli 125.5 p ja keskihajonta 29.5 p, oli 171 p. Kumman pisteluku oli korkeampi suhteessa muihin testin osanottajiin, kun pisteet molemmissa testeissä olivat normaalisti jakautuneet?</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Ratkaisu</p>
+<p>Matti: <span class="math notranslate nohighlight">\(z=\frac{33-23.4}{6.5}=1.48\)</span>, Kalle: <span class="math notranslate nohighlight">\(z=\frac{171-125.5}{29.5}=1.54\)</span>.</p>
+<p>Kalle suoriutui siis paremmin verrattuna muihin testin osallistujiin kuin Matti.</p>
+</div>
+</div>
+<div class="section" id="binomijakaumasta-normaalijakaumaksi">
+<h2>Binomijakaumasta normaalijakaumaksi<a class="headerlink" href="#binomijakaumasta-normaalijakaumaksi" title="Permalink to this headline">¶</a></h2>
+<p>Kun binomijakaumassa <span class="math notranslate nohighlight">\(\text{Bin}(n,p)\)</span> toistokertojen lukumäärä <span class="math notranslate nohighlight">\(n\)</span> on riittävän suuri ja tarkasteltavan tapahtuman todennäköisyys <span class="math notranslate nohighlight">\(p\)</span> pieni, voidaan diskreettiä binomijakaumaa approksimoida jatkuvalla normaalijakaumalla <span class="math notranslate nohighlight">\(N(\mu,\sigma)\)</span>, missä <span class="math notranslate nohighlight">\(\mu=np\)</span> ja <span class="math notranslate nohighlight">\(\sigma=\sqrt{np(1-p)}\)</span>.</p>
+<p>Satunnaisesti valitulle ihmisjoukolle esitetty kysymys, johon on kaksi vaihtoehtoa – vaikkapa “kyllä” tai “ei” – on esimerkki tällaisesta tilanteesta. Tutkitulle joukolle voidaan laskea “kyllä” -vastauksien osuus prosentteina. Tämän jälkeen voidaan soveltaa normaalijakaumaa sen selvittämiseksi, millä todennäköisyydellä koko populaation “kyllä” -vastauksien osuus on tietyn virherajan sisällä tutkitun joukon “kyllä” -vastauksien osuudesta. Tähän liittyy luottamusvälin käsite, johon perehdytään myöhemmin.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="jatkuvat.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Jatkuvat jakaumat</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="testaus_intro.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Peruskäsitteitä</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By LUMA-tiimi, Lapin AMK / Minna Korhonen<br/>
+    
+        &copy; Copyright 2022.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

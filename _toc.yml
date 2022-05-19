@@ -1,0 +1,38 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+parts: 
+  - caption: Tilastotiedettä
+    chapters:
+    - file: muuttujat
+    - file: jakaumat
+    - file: tunnusluvut
+  - caption: Mallin sovitus dataan
+    chapters:
+    - file: malli_intro
+    - file: lineaarinen
+    - file: lineaarinen2
+    - file: polynomi
+    - file: eksponentti
+    - file: logaritmi
+    - file: arviointi
+  - caption: Todennäköisyys
+    chapters:
+    - file: perusteet
+    - file: laskusaantoja
+    - file: kombinatoriikka
+  - caption: Jakaumia
+    chapters:
+    - file: jakaumat_intro
+    - file: diskreetit
+    - file: binomi
+    - file: jatkuvat
+    - file: normaali
+  - caption: Tilastollinen testaus
+    chapters:
+    - file: testaus_intro
+    - file: luottamusvalit_normaali
+    - file: luottamusvalit_t
+    - file: luottamusvalit_prosentti
