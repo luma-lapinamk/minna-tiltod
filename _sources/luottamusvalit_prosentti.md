@@ -29,7 +29,7 @@ ja $z_c$ on valittua luottamustasoa vastaava muuttujan arvo jakaumasta $N(0,1)$.
 
 Sinisilmäisten suhteellinen osuus aineistosta on $p_s=\frac{452}{850}=0.5317$
 
-Keskihajonta on $s=\sqrt{\frac{0.5317(1-0.5317)}{859}}=0.0171$
+Keskihajonta on $s=\sqrt{\frac{0.5317(1-0.5317)}{850}}=0.0171$
 
 Lasketaan $z_c$ luottamustasoa 95 % vastaava arvo normitetusta normaalijakaumasta: 
 
