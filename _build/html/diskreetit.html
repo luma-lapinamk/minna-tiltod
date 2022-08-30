@@ -388,7 +388,8 @@
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="diskreetti-jakauma">
+  <p><span class="math notranslate nohighlight">\( \def\euro{\unicode{x20AC}} \)</span></p>
+<div class="tex2jax_ignore mathjax_ignore section" id="diskreetti-jakauma">
 <h1>Diskreetti jakauma<a class="headerlink" href="#diskreetti-jakauma" title="Permalink to this headline">¶</a></h1>
 <p>Diskreetti todennäköisyysjakauma on lista pareja, joissa on lueteltu kaikki mahdolliset satunnaismuuttujan arvot liitettynä vastaavaan todennäköisyyteen:</p>
 <p><span class="math notranslate nohighlight">\(\left\{\left\{x_1,p_1 \right\}, \left\{x_2,p_2 \right\}, \ldots, \left\{x_n,p_n \right\} \right\}\)</span></p>
@@ -427,7 +428,7 @@
 <p>Yhtä tavallista noppaa heitettäessä jokainen tulos yhdestä kuuteen on yhtä todennäköinen. Jos noppaa heitettäisiin tuhansia kertoja peräjälkeen, tuloksen keskiarvo alkaisi lähestyä tiettyä lukua. Tätä lukua sanotaan odotusarvoksi. Yleisesti todennäköisyysjakauman odotusarvo <span class="math notranslate nohighlight">\(\mu\)</span> on satunnaismuuttujan eniten odotettavissa oleva arvo, eräänlainen keskiarvo. Se lasketaan seuraavasti:</p>
 <p><span class="math notranslate nohighlight">\(\mu=\sum_{i=1}^n p_i x_i\)</span></p>
 <p><strong>Esim.</strong> Arpajaisissa todennäköisyys voittaa 2000 € on 0.01 ja arvan hinta on 15 €. Olkoon <span class="math notranslate nohighlight">\(x_1\)</span> arvalla voittamista vastaava rahasumma (voittosumma, josta on vähennetty arvan hinta), ja <span class="math notranslate nohighlight">\(x_2\)</span> rahasumma joka liittyy siihen että ei voita (tällöin menettää arvan hinnan).</p>
-<p>Odotusarvo voittosummalle on <span class="math notranslate nohighlight">\(0.01\cdot (2000 ~€-15 ~€)+0.99\cdot (-15~€)=5~€\)</span>.</p>
+<p>Odotusarvo voittosummalle on <span class="math notranslate nohighlight">\(0.01\cdot (2000 ~\euro-15 ~\euro)+0.99\cdot (-15~\euro)=5~\euro\)</span>.</p>
 <p>Odotusarvon suuruista lukua ei välttämättä esiinny kertaakaan koko tapahtumien sarjassa. Esimerkiksi nopanheitossa odotusarvo on</p>
 <p><span class="math notranslate nohighlight">\(\mu \frac{1}{6}\cdot 1+\frac{1}{6}\cdot 2+\frac{1}{6}\cdot 3+\frac{1}{6}\cdot 4+\frac{1}{6}\cdot 5+\frac{1}{6}\cdot 6\)</span></p>
 <p><span class="math notranslate nohighlight">\(\mu =\frac{1}{6} (1+2+3+4+5+6)=\frac{1}{6}\cdot 21=\frac{21}{6}=3.5\)</span>.</p>
@@ -437,11 +438,12 @@
 <p><strong>Esim.</strong> Arpajaisissa on 2000 arpaa, joista 50:llä voittaa 10 €, kymmenellä voittaa 100 € ja yhdellä voittaa 300 €. Lopuilla ei voita mitään. Arvan hinta on 5 €. Mikä on voittosumman odotusarvo?</p>
 <div class="tip dropdown admonition">
 <p class="admonition-title">Ratkaisu</p>
-<p>Merkitään voittojen todennäköisyyksiä <span class="math notranslate nohighlight">\(p_1\)</span> (10 €), <span class="math notranslate nohighlight">\(p_2\)</span> (20 €), <span class="math notranslate nohighlight">\(p_3\)</span> (300 €) ja <span class="math notranslate nohighlight">\(p_4\)</span> (0 €). Eri voittojen todennäköisyydet ovat</p>
+<p>Merkitään voittojen todennäköisyyksiä <span class="math notranslate nohighlight">\(p_1\)</span> (10 €), <span class="math notranslate nohighlight">\(p_2\)</span> (20 €), <span class="math notranslate nohighlight">\(p_3\)</span> (300 €) ja <span class="math notranslate nohighlight">\(p_4\)</span> (0 €).</p>
+<p>Eri voittojen todennäköisyydet ovat</p>
 <p><span class="math notranslate nohighlight">\(p_1=\frac{50}{2000}=0.025\)</span>, <span class="math notranslate nohighlight">\(p_2=\frac{10}{2000}=0.005\)</span>, <span class="math notranslate nohighlight">\(p_3=\frac{1}{2000}=0.0005\)</span>, <span class="math notranslate nohighlight">\(p_4=\frac{2000-50-10-1}{2000}=\frac{1939}{2000}=0.9695\)</span></p>
 <p>Odotusarvo on</p>
-<p><span class="math notranslate nohighlight">\(\mu = 0.025\cdot (10-5)~€+ 0.005\cdot (100-5)~€+ 0.0005\cdot (300-5)~€+0.9695\cdot (-5~€)\)</span></p>
-<p><span class="math notranslate nohighlight">\(\mu =-4.1~€\)</span></p>
+<p><span class="math notranslate nohighlight">\(\mu = 0.025\cdot (10-5)~\euro+ 0.005\cdot (100-5)~\euro+ 0.0005\cdot (300-5)~\euro+0.9695\cdot (-5~\euro)\)</span></p>
+<p><span class="math notranslate nohighlight">\(\mu =-4.1~\euro\)</span></p>
 </div>
 </div>
 <div class="section" id="varianssi-ja-keskihajonta">

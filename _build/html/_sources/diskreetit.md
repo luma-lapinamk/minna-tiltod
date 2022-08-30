@@ -1,3 +1,5 @@
+$ \def\euro{\unicode{x20AC}} $
+
 # Diskreetti jakauma
 
 Diskreetti todennäköisyysjakauma on lista pareja, joissa on lueteltu kaikki mahdolliset satunnaismuuttujan arvot liitettynä vastaavaan todennäköisyyteen:
@@ -61,7 +63,7 @@ $\mu=\sum_{i=1}^n p_i x_i$
 
 **Esim.** Arpajaisissa todennäköisyys voittaa 2000 € on 0.01 ja arvan hinta on 15 €. Olkoon $x_1$ arvalla voittamista vastaava rahasumma (voittosumma, josta on vähennetty arvan hinta), ja $x_2$ rahasumma joka liittyy siihen että ei voita (tällöin menettää arvan hinnan).
 
-Odotusarvo voittosummalle on $0.01\cdot (2000 ~€-15 ~€)+0.99\cdot (-15~€)=5~€$.
+Odotusarvo voittosummalle on $0.01\cdot (2000 ~\euro-15 ~\euro)+0.99\cdot (-15~\euro)=5~\euro$.
 
 Odotusarvon suuruista lukua ei välttämättä esiinny kertaakaan koko tapahtumien sarjassa. Esimerkiksi nopanheitossa odotusarvo on 
 
@@ -80,15 +82,17 @@ ja odotusarvo on sama kuin näillä todennäköisyyksillä painotettu keskiarvo.
 :::{admonition} Ratkaisu
 :class: tip, dropdown
 
-Merkitään voittojen todennäköisyyksiä $p_1$ (10 €), $p_2$ (20 €), $p_3$ (300 €) ja $p_4$ (0 €). Eri voittojen todennäköisyydet ovat 
+Merkitään voittojen todennäköisyyksiä $p_1$ (10 €), $p_2$ (20 €), $p_3$ (300 €) ja $p_4$ (0 €).
+
+Eri voittojen todennäköisyydet ovat 
 
 $p_1=\frac{50}{2000}=0.025$, $p_2=\frac{10}{2000}=0.005$, $p_3=\frac{1}{2000}=0.0005$, $p_4=\frac{2000-50-10-1}{2000}=\frac{1939}{2000}=0.9695$
 
 Odotusarvo on 
 
-$\mu = 0.025\cdot (10-5)~€+ 0.005\cdot (100-5)~€+ 0.0005\cdot (300-5)~€+0.9695\cdot (-5~€)$
+$\mu = 0.025\cdot (10-5)~\euro+ 0.005\cdot (100-5)~\euro+ 0.0005\cdot (300-5)~\euro+0.9695\cdot (-5~\euro)$
 
-$\mu =-4.1~€$
+$\mu =-4.1~\euro$
 
 :::
 
