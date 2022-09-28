@@ -25,3 +25,6 @@ html:
   use_issues_button: false
   use_repository_button: true
   extra_navbar: <a href="https://jupyterbook.org">Jupyter Book</a> voimaa
+launch_buttons:
+  binderhub_url: "https://mybinder.org/"
+  thebe: true

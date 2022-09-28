@@ -36,3 +36,4 @@ parts:
     - file: luottamusvalit_normaali
     - file: luottamusvalit_t
     - file: luottamusvalit_prosentti
+    - file: jakaumien_testaus
