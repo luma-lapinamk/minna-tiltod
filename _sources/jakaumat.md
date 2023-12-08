@@ -2,7 +2,6 @@
 
 Tilastollisten muuttujien arvot ja niiden lukumäärät eli frekvenssit muodostavat tilastollisen jakauman. Jakauma voi olla diskreetti tai jatkuva. Tilastolliselle jakaumalle voidaan laskea erilaisia tunnuslukuja. Tunnuslukujen avulla saadaan hyödyllistä tietoa suuresta aineistosta tiiviissä muodossa. 
 
-
 ## Diskreetit jakaumat
 
 Jakauma on diskreetti, jos tilastomuuttuja voi saada vain rajallisen määrän arvoja. Tilastollinen muuttuja voi olla esimerkiksi kokeesta saatu pistemäärä, ihmisen kengännumero tai sadepäivien määrä tietyn kuukauden aikana. Tilastollinen muuttuja voi olla muukin kuin lukuarvo, esimerkiksi henkilön äidinkieli tai kotikunta.
@@ -11,10 +10,9 @@ Jakauma on diskreetti, jos tilastomuuttuja voi saada vain rajallisen määrän a
 
 ![Diskreetti jakauma](diskreetti_jakauma.png "Diskreetti jakauma")
 
-
 ## Jatkuvat jakaumat
 
-Jakauma on jatkuva, jos tilastollinen muuttuja voi saada mitä tahansa arvoja tietyltä väliltä. Mahdollisuuksia on periaatteessa ääretön määrä, mutta käytännössä mittaustarkkuus rajoittaa mahdollisia muuttujien arvoja. Tällaisia muuttujia ovat esimerkiksi ihmisen paino, keihäänheiton tulos tai etäisyys työpaikalle. Muuttujien arvojen jakauma voidaan muodostaa jakamalla arvot sopiviin luokkiin.
+Jakauma on jatkuva, jos tilastollinen muuttuja voi saada mitä tahansa arvoja tietyltä väliltä. Mahdollisuuksia on periaatteessa ääretön määrä, mutta käytännössä mittaustarkkuus rajoittaa mahdollisia muuttujien arvoja. Tällaisia muuttujia ovat esimerkiksi ihmisen massa, keihäänheiton tulos ja etäisyys kotoa työpaikalle. Muuttujien arvojen jakauma voidaan muodostaa jakamalla arvot sopiviin luokkiin.
 
 **Esim.** Testattiin 30 henkilön reaktioaikaa. Mittaus tehtiin mikrosekunnin tarkkuudella. Tulokset ovat ensimmäisessä taulukossa. Tulokset on järkevää esittää sopivasti luokiteltuna, kuten jälkimmäisessä frekvenssitaulukossa. Frekvenssitaulukon voi esittää pylväskaaviona.
 

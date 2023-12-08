@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Tilastot ja todennäköisyys &#8212; Tilastot ja todennäköisyys</title>
+    <title>Tilastotiedettä ja todennäköisyyslaskentaa &#8212; Tilastot ja todennäköisyys</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,6 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Tilastolliset muuttujat" href="muuttujat.html" />
@@ -110,7 +112,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1 current active">
                 <a class="reference internal" href="#">
-                    Tilastot ja todennäköisyys
+                    Tilastotiedettä ja todennäköisyyslaskentaa
                 </a>
             </li>
         </ul>
@@ -254,6 +256,11 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="luottamusvalit_prosentti.html">
+   Prosenttiosuuden luottamusväli
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="jakaumien_testaus.html">
    Kahden otoksen vertailu
   </a>
@@ -393,7 +400,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Tilastot ja todennäköisyys</h1>
+                <h1>Tilastotiedettä ja todennäköisyyslaskentaa</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -405,20 +412,21 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="tilastot-ja-todennakoisyys">
-<h1>Tilastot ja todennäköisyys<a class="headerlink" href="#tilastot-ja-todennakoisyys" title="Permalink to this headline">#</a></h1>
-<p>Sivusto sisältää oppimateriaalia opintojaksolle Tilastot ja todennäköisyys. Kaikkea materiaalista ei opiskella opintojakson aikana, vaan osaa voi käyttää halutessaan lisälukemisena. Materiaali täydentyy opintojakson aikana lisäesimerkeillä ym. Nämä lisäaineistot löytyvät opintojakson meneillään olevan toteutuksen Moodle-työtilasta.</p>
-<p>Opintojakson alkupuoliskolla tutustutaan seuraaviin aiheisiin:</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="tilastotiedetta-ja-todennakoisyyslaskentaa">
+<h1>Tilastotiedettä ja todennäköisyyslaskentaa<a class="headerlink" href="#tilastotiedetta-ja-todennakoisyyslaskentaa" title="Permalink to this headline">#</a></h1>
+<p>Sivusto sisältää oppimateriaalia Lapin AMK:n insinöörikoulutuksen opintojaksolle “Tilastot ja differentiaalilaskenta”. Kaikkea materiaalista ei opiskella opintojakson aikana, vaan osaa voi käyttää halutessaan lisälukemisena. Opintojakson ajankohtaisen toteutuksen Moodle-työtilasta löytyy lisäesimerkkejä ja taulukkolaskentapohjia.</p>
+<p>Työkaluna tilastotieteen laskuissa käytetään Microsoft Exceliä tai muuta soveltuvaa taulukkolaskentasovellusta (esim. Libre Office tai Google Sheets). Excelin komentoja löytyy <a class="reference external" href="https://support.microsoft.com/fi-fi/office/excelin-funktiot-luokittain-5f91f4e9-7b42-46d2-9bd1-63f26a86c0eb">täältä</a>.</p>
+<p>Opintojakson jälkimmäinen osuus keskittyy differentiaalilaskentaan. Oppimateriaalia siihen on saatavilla esimerkiksi <a class="reference external" href="https://luma-lapinamk.github.io/minna-diffint/intro.html">täällä</a>.</p>
+<p>Kirjassa esiintyvät matemaattiset merkinnät saa näkymään suurempana (ainakin Chrome- ja Edge- selaimilla) seuraavasti:</p>
 <ul class="simple">
-<li><p>tilastollisen aineiston käsittelyn peruskäsitteet</p></li>
-<li><p>todennäköisyyslaskennan perusteet</p></li>
-<li><p>todennäköisyys- ja kertymäfunktion käsite</p></li>
-<li><p>binomijakauma esimerkkinä diskreetistä jakaumasta</p></li>
-<li><p>normaalijakauma esimerkkinä jatkuvasta jakaumasta</p></li>
-<li><p>luottamusvälien käsite ja laskeminen</p></li>
+<li><p>klikkaa merkintää hiiren toisella napilla</p></li>
+<li><p>valitse Math Settings</p></li>
+<li><p>valitse Zoom Trigger</p></li>
+<li><p>valitse Click</p></li>
+<li><p>tämän jälkeen hiiren 1. nappulan klikkaus näyttää merkinnät suurennettuina</p></li>
 </ul>
-<p>Jälkimmäinen osuus (jonka materiaalia tällä sivustolla ei ole) keskittyy virhearviointiin maanmittaustekniikan alalla. Tällä osuudella on hallittava erityisesti normaalijakaumaan liittyvät asiat.</p>
-<p>Työkaluna opintojaksolla käytetään Microsoft Exceliä tai muuta soveltuvaa taulukkolaskentasovellusta (esim. Libre Office tai Google Sheets). Excelin komentoja löytyy <a class="reference external" href="https://support.microsoft.com/fi-fi/office/excelin-funktiot-luokittain-5f91f4e9-7b42-46d2-9bd1-63f26a86c0eb">täältä</a>.</p>
+<p>Kokeile esimerkiksi tällä kaavalla: <span class="math notranslate nohighlight">\(f(x)=\frac{3x^2+4x+5}{2x^3+7x-3}\)</span></p>
+<p>Materiaalin on tehnyt Lapin AMK:n LUMA-tiimi. Materiaali täydentyy vielä! Kaikki LUMA-tiimin tekemät sähköiset oppimateriaalit löytyvät <a class="reference external" href="http://luma-lapinamk.pub">materiaalipankista</a>.</p>
 <div class="toctree-wrapper compound">
 </div>
 <div class="toctree-wrapper compound">
@@ -474,7 +482,7 @@ title="Print to PDF"
   
     By LUMA-tiimi, Lapin AMK / Minna Korhonen<br/>
   
-      &copy; Copyright 2022.<br/>
+      &copy; Copyright 2023.<br/>
 </p>
         </footer>
     </div>

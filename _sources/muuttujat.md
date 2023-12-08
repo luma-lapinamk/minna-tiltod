@@ -11,7 +11,7 @@ Muuttujien arvot voivat siis olla sanallisia ilmaisuja tai mittalukuja.
 - Jos muuttujan saamat arvot on sanallisia, niin muuttuja on **kvalitatiivinen** (laadullinen).
 - Jos muuttujan saamat arvot ovat lukuja, niin muuttuja on **kvantitatiivinen** (määrällinen).
 
-Osaa tilastotieteen työkaluista voidaan käyttää molemmille muuttujatyypeille, osaa taas pelkästään kvalitatiivisille. Näihin erilaisiin menetelmiin perehdytään myöhemmin.
+Osaa tilastotieteen työkaluista voidaan käyttää molemmille muuttujatyypeille, osaa taas pelkästään kvantitatiivisille. Näihin erilaisiin menetelmiin perehdytään myöhemmin.
 
 ## Asteikot
 
@@ -22,7 +22,7 @@ Muuttujien arvot kuuluvat aina jollekin **asteikolle**. Kun kerää aineistoa jo
 3. Välimatka-asteikko
 4. Suhdelukuasteikko
 
-Kun muuttujien arvot on astettu sopivalle asteikolle, niin muuttujan arvoja voidaan esittää kuvaajana. Tarkastellaan seuraavana, millaisia kuvaajia muodostuu eri asteikoille kuuluvista muuttujien arvoista.
+Kun muuttujien arvot on sijoitettu sopivalle asteikolle, niin muuttujan arvoja voidaan esittää kuvaajana. Tarkastellaan seuraavana, millaisia kuvaajia muodostuu eri asteikoille kuuluvista muuttujien arvoista.
 
 **Luokitteluasteikko**
 
@@ -38,15 +38,15 @@ Järjestysasteikkoa voidaan käyttää kvantitatiivisille muuttujille ja myös k
 
 **Välimatka-asteikko**
 
-Muuttujat arvoja voidaan esittää välimatka-asteikolla silloin, kun muuttujien arvot ovat lukuja, joiden arvoja voidaan mielekkäästi verrata toisiinsa yhteen- ja vähennyslaskutoimituksia käyttämällä, mutta ei kerto- tai jakolaskutoimituksilla. Jonakin päivänä lämpötila voi laskea +10 asteesta +5 asteeseen. Näitä kahta lukua vertaamalla voisi ajatella, että lämpötila puolittui. Mutta entä, jos lämpötila muuttuu +3 asteesta -2 asteeseen? Viiden asteen viilenemisen on mielekkäämpi tapa kuvata tätä muutosta. Välimatka-asteikon muuttujille tyypilliseen tapaan nolla astetta ei ole sen erityisempi kuin muutkaan lämpötilat, eikä siksi määritä asteikolle mitään kiinteää alkupistettä. 
+Muuttujan arvoja voidaan esittää välimatka-asteikolla silloin, kun muuttujien arvot ovat lukuja, joita voidaan mielekkäästi verrata toisiinsa yhteen- ja vähennyslaskutoimituksia käyttämällä, mutta ei kerto- tai jakolaskutoimituksilla. Jonakin päivänä lämpötila voi laskea +10 asteesta +5 asteeseen. Näitä kahta lukua vertaamalla voisi ajatella, että lämpötila puolittui. Mutta entä, jos lämpötila muuttuu +3 asteesta -2 asteeseen? Viiden asteen viileneminen on mielekkäämpi tapa kuvata tätä muutosta. Välimatka-asteikon muuttujille tyypilliseen tapaan nolla astetta ei ole sen erityisempi kuin muutkaan lämpötilat, eikä siksi määritä asteikolle mitään kiinteää alkupistettä. 
 
-Muuttujan arvo voi kuvata vaikkapa lämpötilan ajallista muutosta. Tällöin sitä voi luontevasti esittää viivakaaviolla. Välimatka-asteikon muuttujia voidaan käyttää myös jakaumissa. Voidaan esimerkiksi tilastoida, kuinka monena päivänä kesäloman aikana oli vähintään 20 astetta lämmintä. Tähän palataan toisessa kohdassa. 
+Muuttujan arvo voi kuvata vaikkapa lämpötilaa tiettynä ajankohtana. Tällöin arvoja voi luontevasti esittää viivakaaviolla. Välimatka-asteikon muuttujia voidaan käyttää myös jakaumissa. Voidaan esimerkiksi tilastoida, kuinka monena päivänä kesäloman aikana oli vähintään 20 astetta lämmintä. Tähän palataan toisessa kohdassa tällä sivustolla. 
 
 ![Viivakaavio, esim. 1](viivakaavio1.png "Viivakaavio, esim. 1")
 
 **Suhdelukuasteikko**
 
-Suhdelukuasteikko sopii sellaisille kvantitatiivisille muuttujille, joita on mielekästä vertailla toisiinsa myös kerto- ja jakolaskuilla. Näillä muuttujan arvoilla on jokin merkityksellinen nollakohta. Esimerkiksi palkan määrä tai kasvavan kasvin pituus ovat lukuarvoltaan vähintään nolla. Voidaan sanoa, että vuonna 2025 palkka on 3 % korkeampi kuin vuonna 2023, tai että puun taimi on syyskuussa kaksi kertaa niin pitkä kuin kesäkuussa. Myös suhdeasteikon havaintoja voidaan kuvata viivakaaviolla. Näistäkin muuttujista voidaan tehdä jakaumia samaan tapaan kuin välimatka-asteikon muuttujista. Mediasta tuttuja esimerkkejä ovat erilaiset palkkatilastot.
+Suhdelukuasteikko sopii sellaisille kvantitatiivisille muuttujille, joita on mielekästä vertailla toisiinsa myös kerto- ja jakolaskuilla. Näillä muuttujan arvoilla on jokin merkityksellinen nollakohta. Esimerkiksi palkan määrä tai kasvavan kasvin pituus ovat lukuarvoltaan vähintään nolla. Voidaan sanoa, että vuonna 2025 henkilön palkka on 3 % korkeampi kuin se oli vuonna 2023, tai että puun taimi on syyskuussa kaksi kertaa niin pitkä kuin kesäkuussa. Myös suhdeasteikon havaintoja voidaan kuvata viivakaaviolla. Näistäkin muuttujista voidaan tehdä jakaumia samaan tapaan kuin välimatka-asteikon muuttujista. Mediasta tuttuja esimerkkejä ovat erilaiset palkkatilastot.
 
 ![Viivakaavio, esim. 2](viivakaavio2.png "Viivakaavio, esim. 2")
 Kuvan data pohjautuu [Autoalan tiedotuskeskuksen](https://www.aut.fi/tilastot/verotus_hintakehitys_ja_liikennemenot/bensiinin_ja_dieselin_hintakehitys) aineistoon.

@@ -50,6 +50,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
@@ -111,7 +113,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="intro.html">
-                    Tilastot ja todennäköisyys
+                    Tilastotiedettä ja todennäköisyyslaskentaa
                 </a>
             </li>
         </ul>
@@ -413,26 +415,26 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="prosenttiosuuden-luottamusvali">
 <h1>Prosenttiosuuden luottamusväli<a class="headerlink" href="#prosenttiosuuden-luottamusvali" title="Permalink to this headline">#</a></h1>
-<p><a class="reference external" href="https://www.hs.fi/politiikka/art-2000008778872.html">Helsingin Sanomat</a> uutisoi 28.4.2022, että 65 % suomalaisista haluaisi Suomen liittyvän Natoon. Uutisessa kerrotaan, että kyselyyn vastasi 1062 henkilöä, jotka edustavat 18-79-vuotiaita suomalaisia. Uutisen mukaan kyselyn  tuloksen virhemarginaali on 3 prosenttiyksikköä suuntaansa. Ei siis voida 100 % varmuudella sanoa, että tarkalleen 65 % suomalaisista kannatti tuolloin Natoon liittymistä. Voidaan kuitenkin 95 % varmuudella sanoa, että 61-68 % suomalaisista kannatti Natoon liittymistä.</p>
-<p>Oletetaan, että tietyn ominaisuuden osuus <span class="math notranslate nohighlight">\(p\)</span> populaatiosta, jossa on <span class="math notranslate nohighlight">\(n\)</span> alkiota, noudattaa todennäköisyysjakaumaa <span class="math notranslate nohighlight">\(\text{Bin}(p,n)\)</span>. Kun <span class="math notranslate nohighlight">\(np \geq 5\)</span> ja <span class="math notranslate nohighlight">\(n(1-p) \geq 5\)</span>, binomijakauma voidaan korvata normaalijakaumalla <span class="math notranslate nohighlight">\(N\left(np,\sqrt{np(1-p)}\right)\)</span>.</p>
-<p>Kun populaatiosta otetaan otos, ja lasketaan sille vastaava otosprosenttiosuus, noudattaa se normaalijakaumaa</p>
-<p><span class="math notranslate nohighlight">\(N\left(np,\sqrt{\frac{p(1-p)}{n}}\right)\)</span>.</p>
+<p>Oletetaan, että tietyn ominaisuuden osuus <span class="math notranslate nohighlight">\(p\)</span> populaatiosta, jossa on <span class="math notranslate nohighlight">\(n\)</span> alkiota, noudattaa todennäköisyysjakaumaa <span class="math notranslate nohighlight">\(\text{Bin}(p,n)\)</span>. Kun <span class="math notranslate nohighlight">\(n \geq 5\)</span> ja <span class="math notranslate nohighlight">\(n(1-p) \geq 5\)</span>, niin binomijakauma voidaan korvata normaalijakaumalla</p>
+<p><span class="math notranslate nohighlight">\(N\left(np,\sqrt{np(1-p)}\right)\)</span>.</p>
+<p>Kun populaatiosta otetaan otos ja lasketaan sille vastaava otosprosenttiosuus, noudattaa se normaalijakaumaa</p>
+<p><span class="math notranslate nohighlight">\(N\left(np, \sqrt{\frac{np(1-p)}{n}}\right)\)</span>.</p>
 <p>Keskiarvon keskivirhettä vastaava otosprosenttiosuuden keskivirhe on yllämainitun normaalijakauman keskihajonta</p>
-<p><span class="math notranslate nohighlight">\(s=\sqrt{\frac{p(1-p)}{n}}\)</span></p>
-<p>Populaation prosenttiosuutta <span class="math notranslate nohighlight">\(p\)</span> ei useinkaan tiedetä, mutta kun otos on riittävän suuri, voidaan <span class="math notranslate nohighlight">\(p\)</span> korvata otosprosenttiosuudella <span class="math notranslate nohighlight">\(p_s\)</span>. Tällöin saadaan prosenttiosuuden luottamusväliksi</p>
-<p><span class="math notranslate nohighlight">\((p_s-\Delta, p_s+\Delta)\)</span></p>
-<p>missä</p>
-<p><span class="math notranslate nohighlight">\(\Delta = z_c \sqrt{\frac{p_s(1-p_s)}{n}}\)</span></p>
-<p>ja <span class="math notranslate nohighlight">\(z_c\)</span> on valittua luottamustasoa vastaava muuttujan arvo jakaumasta <span class="math notranslate nohighlight">\(N(0,1)\)</span>.</p>
-<p><strong>Esim.</strong> Otantaan satunnaisesti valituista 850 suomalaisesta 452:lla oli siniset silmät. Laske 95 % luottamustasolla, kuinka monella prosentilla kaikista suomalaisista on siniset silmät.</p>
+<p><span class="math notranslate nohighlight">\(s=\sqrt{\frac{p(1-p)}{n}}\)</span>.</p>
+<p>Populaation prosenttiosuutta <span class="math notranslate nohighlight">\(p\)</span> ei useinkaan tiedetä, mutta kun otos on riittävän suuri, voidaan <span class="math notranslate nohighlight">\(p\)</span> korvata otosprosenttiosuudella, jota merkitään tässä <span class="math notranslate nohighlight">\(p_s\)</span>. Tällöin saadaan prosenttiosuuden luottamusväliksi <span class="math notranslate nohighlight">\((p_s-\Delta, p_s + \Delta)\)</span>, missä
+missä</p>
+<p><span class="math notranslate nohighlight">\(\Delta=z_c \sqrt{\frac{p_s(1-p_s)}{n}}\)</span></p>
+<p>ja <span class="math notranslate nohighlight">\(z_c\)</span> on luottamustasoa vastaava muuttujan arvo jakaumasta <span class="math notranslate nohighlight">\(N(0,1)\)</span>.</p>
+<p><strong>Esim.</strong> Otantaan satunnaisesti valituista 850 suomalaisesta 452:lla oli siniset silmät.
+Laske 95 % luottamustasolla, kuinka monella prosentilla suomalaisista on siniset silmät.</p>
 <div class="tip dropdown admonition">
 <p class="admonition-title">Ratkaisu</p>
-<p>Sinisilmäisten suhteellinen osuus aineistosta on <span class="math notranslate nohighlight">\(p_s=\frac{452}{850}=0.5317\)</span></p>
-<p>Keskihajonta on <span class="math notranslate nohighlight">\(s=\sqrt{\frac{0.5317(1-0.5317)}{850}}=0.0171\)</span></p>
-<p>Lasketaan <span class="math notranslate nohighlight">\(z_c\)</span> luottamustasoa 95 % vastaava arvo normitetusta normaalijakaumasta:</p>
-<p>Excel NORMAALI.JAKAUMA.KÄÄNT(97,5%;0;1), tulos 1.96</p>
-<p>Virhemarginaali on siis <span class="math notranslate nohighlight">\(\Delta = z_c \cdot s = 1.96\cdot 0.0171=0.034=3.4~\%\)</span></p>
-<p>Luottamusväli on siis <span class="math notranslate nohighlight">\((53.2~\% - 3.4~\%, 53.2~\% + 3.4~\%) = (49.8~\%, 56.6~\%)\)</span>.</p>
+<p>Sinisilmäisten suhteellinen osuus aineistosta on <span class="math notranslate nohighlight">\(p_s=\frac{452}{850}=0.5317\)</span>.</p>
+<p>Keskihajonta on <span class="math notranslate nohighlight">\(s=\sqrt{\frac{p_s (1-p_s)}{n}}= \sqrt{\frac{0.5317\cdot 0.4683}{850}} = 0.0171\)</span>.</p>
+<p>Luottamustasoa 95 % vastaava arvo normitetusta normaalijakaumasta saadaan seuraavalla Excel-komennolla:</p>
+<p>=NORMAALI.JAKAUMA.KÄÄNT(97,5%;0;1), josta tuloksena on 1.96.</p>
+<p>Virhemarginaali on <span class="math notranslate nohighlight">\(\Delta = 1.96 \cdot 0.0171 = 0.034 = 3.4 ~\%\)</span>.</p>
+<p>Luottamusväli on siis (53.2 % - 3.4 %, 53.2 % + 3.4 %) = (49.8 %, 56.6 %)</p>
 </div>
 </section>
 
@@ -486,7 +488,7 @@ title="Print to PDF"
   
     By LUMA-tiimi, Lapin AMK / Minna Korhonen<br/>
   
-      &copy; Copyright 2022.<br/>
+      &copy; Copyright 2023.<br/>
 </p>
         </footer>
     </div>

@@ -113,7 +113,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="intro.html">
-                    Tilastot ja todennäköisyys
+                    Tilastotiedettä ja todennäköisyyslaskentaa
                 </a>
             </li>
         </ul>
@@ -254,6 +254,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="luottamusvalit_t.html">
    t-jakauman luottamusvälit
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="luottamusvalit_prosentti.html">
+   Prosenttiosuuden luottamusväli
   </a>
  </li>
  <li class="toctree-l1">
@@ -497,24 +502,39 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="tunnuslukuja">
 <h1>Tunnuslukuja<a class="headerlink" href="#tunnuslukuja" title="Permalink to this headline">#</a></h1>
-<p>Tilastollista jakaumaa kuvaavia tunnuslukuja ovat keskiarvo, keskihajonta, moodi, mediaani ja prosenttipisteet. Tällaisia lukuja voidaan laskea, jos tilastollinen muuttuja on laadultaan kvantitatiivinen (moodi voidaan laskea myös kvalitatiiviselle muuttujalle). Tunnusluvun tarkoituksena on tiivistää tilaston sisältämä informaatio yhden luvun mittaiseen, mutta havainnolliseen muotoon. Väärin käytettynä tunnusluvut voivat kuitenkin helposti vääristää tilaston informaatiota.</p>
+<p>Tilastollisia tunnuslukuja käytetään siihen, että kuvaillaan suurta aineistomäärää tiiviisti. Näitä tunnuslukuja ovat keskiarvo, keskihajonta, moodi, mediaani ja prosenttipisteet. Tällaisia lukuja voidaan laskea, jos tilastollinen muuttuja on laadultaan kvantitatiivinen. Moodi voidaan laskea myös kvalitatiiviselle muuttujalle. Tunnusluvun tarkoituksena on tiivistää tilaston sisältämä informaatio yhden luvun mittaiseen, mutta havainnolliseen muotoon. Väärin käytettynä tunnusluvut voivat kuitenkin helposti vääristää tilaston informaatiota.</p>
 <section id="keskiarvo">
 <h2>Keskiarvo<a class="headerlink" href="#keskiarvo" title="Permalink to this headline">#</a></h2>
-<p>Yleisin tunnusluku on keskiarvo <span class="math notranslate nohighlight">\(\bar{x}=\frac{\sum_{i=1}^n x_i}{n}\)</span>,</p>
-<p>missä <span class="math notranslate nohighlight">\(n\)</span> on kaikkien havaintojen määrä ja arvot <span class="math notranslate nohighlight">\(x_i\)</span> ovat eri havaintoja vastaavia arvoja.</p>
-<p>Merkintä <span class="math notranslate nohighlight">\(\sum_{i=1}^n x_i\)</span> tarkoittaa, että lasketaan summa <span class="math notranslate nohighlight">\(x_1 + x_2 + \ldots x_n\)</span>.</p>
-<p>Jos aineisto on esitetty frekvenssitaulukkona, niin keskiarvo saadaan kaavalla</p>
-<p><span class="math notranslate nohighlight">\(\bar{x}=\frac{\sum_{i=1}^n f_i x_i}{n}\)</span>,</p>
-<p>missä <span class="math notranslate nohighlight">\(f_i\)</span> on muuttujan arvon <span class="math notranslate nohighlight">\(x_i\)</span> frekvenssi.</p>
+<p>Yleisin tunnusluku on keskiarvo <span class="math notranslate nohighlight">\(\bar{x}=\frac{\sum_{i=1}^n x_i}{n}\)</span>, missä <span class="math notranslate nohighlight">\(n\)</span> on kaikkien havaintojen määrä ja arvot <span class="math notranslate nohighlight">\(x_i\)</span> ovat eri havaintoja vastaavia arvoja. Merkintä <span class="math notranslate nohighlight">\(\sum_{i=1}^n x_i\)</span> tarkoittaa, että lasketaan summa <span class="math notranslate nohighlight">\(x_1 + x_2 + \ldots x_n\)</span>.</p>
+<div class="admonition-esimerkki admonition">
+<p class="admonition-title">Esimerkki</p>
+<p>Markkinat kestivät kolme päivää, perjantaista sunnuntaihin. Markkinoilla kävi perjantaina 278 ihmistä, lauantaina 422 ihmistä ja sunnuntaina 385 ihmistä.</p>
+<p>Kävijöiden keskiarvo oli <span class="math notranslate nohighlight">\(\bar{x}=\frac{278+422+385}{3} \approx 362\)</span> ihmistä.</p>
+</div>
+<p>Jos aineisto on esitetty frekvenssitaulukkona, niin keskiarvo saadaan kaavalla <span class="math notranslate nohighlight">\(\bar{x}=\frac{\sum_{i=1}^n f_i x_i}{n}\)</span>, missä <span class="math notranslate nohighlight">\(f_i\)</span> on muuttujan arvon <span class="math notranslate nohighlight">\(x_i\)</span> frekvenssi.</p>
+<div class="admonition-esimerkki admonition">
+<p class="admonition-title">Esimerkki</p>
+<p>Erään opintojakson suoritti 28 opiskelijaa. Heistä kuusi sai arvosanan 1, neljä sai arvosanan 2, neljä sai arvosanan 3, 11 sai arvosanan 4 ja loput kolme sai arvosanan 5.</p>
+<p>Arvosanojen keskiarvo oli <span class="math notranslate nohighlight">\(\bar{x}=\frac{6\cdot 1 + 4\cdot 2 + 4 \cdot 3 + 11 \cdot 4 + 3\cdot 5}{28} = \frac{85}{28}\approx 3.0\)</span>.</p>
+</div>
 <p>Keskiarvo voidaan Excelissä laskea funktiolla KESKIARVO tai AVERAGE. Funktion parametriksi tulee luvut sisältävä alue joko hiirellä maalaamalla tai kirjoittamalla soluindeksit. Erilliset alueet yhdistetään ; -merkillä, tai hiirellä valitessa Ctrl-näppäintä pohjassa pitämällä.</p>
 <p><img alt="Keskiarvo" src="_images/keskiarvo.png" /></p>
 </section>
 <section id="keskihajonta">
 <h2>Keskihajonta<a class="headerlink" href="#keskihajonta" title="Permalink to this headline">#</a></h2>
-<p>Keskihajonta <span class="math notranslate nohighlight">\(\sigma\)</span> kuvaa, kuinka paljon yksittäiset havainnot keskimäärin poikkeavat aineiston keskiarvosta, tai toisaalta sitä, kuinka laajalle muuttujan arvot ovat levittäytyneet keskiarvon ympärille. Keskihajonnan laskukaava on</p>
-<p><span class="math notranslate nohighlight">\(\sigma=\sqrt{\frac{\sum_{i=1}^n (x_i-\bar{x})^2}{n}}\)</span>.</p>
-<p>Jos aineisto on esitetty frekvenssitaulukkona, niin keskihajonta saadaan kaavalla</p>
-<p><span class="math notranslate nohighlight">\(\sigma=\sqrt{\frac{\sum_{i=1}^n f_i (x_i-\bar{x})^2}{n}}\)</span>.</p>
+<p>Keskihajonta <span class="math notranslate nohighlight">\(\sigma\)</span> kuvaa, kuinka paljon yksittäiset havainnot keskimäärin poikkeavat aineiston keskiarvosta, tai toisaalta sitä, kuinka laajalle muuttujan arvot ovat levittäytyneet keskiarvon ympärille.</p>
+<p>Keskihajonnan laskukaava on <span class="math notranslate nohighlight">\(\sigma=\sqrt{\frac{\sum_{i=1}^n (x_i-\bar{x})^2}{n}}\)</span>.</p>
+<div class="admonition-esimerkki admonition">
+<p class="admonition-title">Esimerkki</p>
+<p>Opiskelija suoritti lukukauden aikana 6 opintojaksoa ja sai niistä arvosanat 2, 3, 3, 4, 4 ja 5. Arvosanojen keskiarvo on <span class="math notranslate nohighlight">\(\bar{x}=\frac{2+3+3+4+3+5}{6}=\frac{21}{6}=3.5\)</span>.</p>
+<p>Arvosanojen keskihajonta oli <span class="math notranslate nohighlight">\(\sigma=\sqrt{\frac{(2-3.5)^2+(3-3.5)^2+(3-3.5)^2+(4-3.5)^2+(4-3.5)^2+(5-3.5)^2}{6}}\approx 0.96\)</span>.</p>
+</div>
+<p>Jos aineisto on esitetty frekvenssitaulukkona, niin keskihajonta saadaan kaavalla <span class="math notranslate nohighlight">\(\sigma=\sqrt{\frac{\sum_{i=1}^n f_i (x_i-\bar{x})^2}{n}}\)</span>.</p>
+<div class="admonition-esimerkki admonition">
+<p class="admonition-title">Esimerkki</p>
+<p>Erään opintojakson suoritti 28 opiskelijaa. Heistä kuusi sai arvosanan 1, neljä sai arvosanan 2, neljä sai arvosanan 3, 11 sai arvosanan 4 ja loput kolme sai arvosanan 5. Arvosanojen keskiarvoksi laskettiin jo aiemmin 3.0.</p>
+<p>Keskihajonta on <span class="math notranslate nohighlight">\(\sigma=\sqrt{\frac{6\cdot (1-3.0)^2+4\cdot (2-3.0)^2+4\cdot (3-3.0)^2+11\cdot (4-3.0)^2+3\cdot (5-3.0)^2}{28}} \approx 1.35\)</span>.</p>
+</div>
 <p>Jos suuresta joukosta otetaan näyte, esim. jos tehtaan tuotantolinjalta otetaan pistokokein näytekappaleita, keskihajonta lasketaan hieman eri kaavalla:</p>
 <p><span class="math notranslate nohighlight">\(\sigma=\sqrt{\frac{\sum_{i=1}^n f_i (x_i-\bar{x})^2}{n-1}}\)</span>.</p>
 <p>Excelissä aineiston keskihajonta saadaan KESKIHAJONTA.P tai KESKIHAJONTA.S -funktiolla. Näistä yleisemmin käytetään funktiota KESKIHAJONTA.S, joka vastaa jälkimmäistä edellä esitetyistä kaavoista (s-kirjain tulee sanasta sample ja p-kirjain sanasta population). Useinhan kaikkea mahdollista ei pystytäkään mittaamaan, vaan joudutaan ottamaan näytteitä joiden toivotaan antavan luotettavan kuvan koko populaatiosta.</p>
@@ -537,8 +557,26 @@ title="Print to PDF"
 <section id="mediaani">
 <h2>Mediaani<a class="headerlink" href="#mediaani" title="Permalink to this headline">#</a></h2>
 <p>Mediaani on järjestyksessä olevan aineiston keskimmäinen arvo. Jos lukuja on parillinen määrä, niin mediaani on kahden keskimmäisen arvon keskiarvo. Puolet havainnoista on mediaania pienempiä, puolet taas suurempia. Taulukoidun aineiston mediaanin laskemiseen voidaan käyttää Excelin funktiota MEDIAANI (MEDIAN).</p>
-<p>Luokitellusta aineistosta, jossa frekvenssi on ilmoitettu, saadaan mediaani laskemalla eri luokkien summafrekvenssi ja edelleen suhteellinen summafrekvenssi. Luokan summafrekvenssi tarkoittaa niiden havaintojen määrää, jotka kuuluvat kyseiseen luokkaan tai sitä aiempiin luokkiin. Suhteellinen summafrekvenssi on tiettyyn luokkaan tai sitä aiempiin luokkiin kuuluvien havaintojen osuus kaikista havainnoista. Mediaani on se arvo, jonka kohdalla suhteellinen summafrekvenssi on vähintään 50 %.</p>
-<p>Prosessi on esitetty seuraavissa kuvissa (suomenkielisessä Excelissä summa lasketaan funktiolla SUMMA). Aineisto on sama kuin edellisessä ikäjakauma-esimerkissä. Ensimmäisessä kuvassa lasketaan, kuinka monta henkilöä kuuluu tiettyyn ikäluokkaan tai johonkin alemmista ikäluokista. Viimeisen ikäluokan summafrekvenssiksi pitäisi tulla täsmälleen sama luku kuin työntekijöiden yhteismäärä, sillä varmasti jokainen kuuluu joko vanhimpaan tai johonkin nuoremmista ikäluokista. Sen jälkeen lasketaan summafrekvenssien suhteelliset osuudet koko henkilöstön määrästä. Huomataan, että 57 % työntekijöistä kuuluu 41-45 vuotiaiden ikäluokkaan tai johonkin sitä nuoremmista ikäluokista. Se on siis iän mediaaniluokka.</p>
+<div class="admonition-esimerkki admonition">
+<p class="admonition-title">Esimerkki</p>
+<p>Eräässä pienessä yrityksessä on yhdeksän työtekijää. Heidän ikänsä ovat 45, 37, 62, 23, 19, 32, 38, 49 ja 55 vuotta.</p>
+<p>Järjestettynä iät ovat seuraavat: 19, 23, 32, 37, 38, 45, 49, 55, 62, joista keskimmäisenä on 38. Ikien keskiarvo on kuitenkin 40 vuotta. Kukaan ei ole keskiarvon ikäinen, mutta mediaani-iälle kyllä löytyy edustaja.</p>
+<p>Yritykseen tulee vielä yksi työntekijä. Hän on 44-vuotias. Nyt iät ovat järjestettynä: 19, 23, 32, 37, 38, 44, 45, 49, 55, 62. Lukuja on parillinen määrä, joten keskimmäistä lukua ei ole olemassa. Kaksi keskimmäistä lukua ovat 38 ja 44 vuotta. Mediaani-ikä on nyt näiden keskiarvo eli 41 vuotta. Keski-ikä kasvaa samalla arvoon 40.4 vuotta.</p>
+</div>
+<p>Aineistosta, jota ei ole esitetty luettona muuttujan arvoista, vaan frekvenssien avulla, saadaan mediaani laskemalla eri muuttujien <em>summafrekvenssi</em> ja edelleen <em>suhteellinen summafrekvenssi</em>. Summafrekvenssi tarkoittaa niiden havaintojen määrää, jotka ovat pienempiä tai yhtä suuria kuin jokin tietty muuttujan arvo. Suhteellinen summafrekvenssi on näiden havaintojen osuus kaikista havainnoista. Mediaani on se arvo, jonka kohdalla suhteellinen summafrekvenssi on vähintään 50 %.</p>
+<div class="admonition-esimerkki admonition">
+<p class="admonition-title">Esimerkki</p>
+<p>Erään opintojakson suoritti 28 opiskelijaa. Heistä kuusi sai arvosanan 1, neljä sai arvosanan 2, neljä sai arvosanan 3, 11 sai arvosanan 4 ja loput kolme sai arvosanan 5. Lasketaan arvosanojen mediaani seuraavasti:</p>
+<ul class="simple">
+<li><p>arvosanan 1 saavutti 6 opiskelijaa eli <span class="math notranslate nohighlight">\(\frac{6}{28}\cdot 100 % \approx 21~\%\)</span></p></li>
+<li><p>arvosanan <em>enintään</em> 2 saavutti 6+4 eli 10 opiskelijaa, siis <span class="math notranslate nohighlight">\(\frac{10}{28}\cdot 100 % \approx 36~\%\)</span></p></li>
+<li><p>arvosanan <em>enintään</em> 3 saavutti 6+4+4 eli 14 opiskelijaa, siis <span class="math notranslate nohighlight">\(\frac{14}{28}\cdot 100 % = 50~\%\)</span></p></li>
+<li><p>arvosanan <em>enintään</em> 4 saavutti 14+11 eli 25 opiskelijaa, siis <span class="math notranslate nohighlight">\(\frac{25}{28}\cdot 100 % \approx 89~\%\)</span></p></li>
+<li><p>arvosanan <em>enintään</em> 5, eli minkä tahansa arvosanan väliltä 1-5, saavutti 28 opiskelijaa eli 100 % osallistujista</p></li>
+</ul>
+<p>Mediaani on näin ollen arvosana 3. Tämä on tarkka arvo, eli se <strong>muuttujan</strong> arvo, jolla saavutetaan tietty osuus havainnoista. Keskiarvo sen sijaan ei ole aivan tasan 3, vaan hieman enemmän (noin 3.04).</p>
+</div>
+<p>Seuraavissa kuvissa on esimerkki siitä, kuinka mediaani lasketaan luokitellulle aineistolle (suomenkielisessä Excelissä summa lasketaan funktiolla SUMMA). Aineisto on sama kuin aiemmassa ikäjakauma-esimerkissä. Ensimmäisessä kuvassa lasketaan, kuinka monta henkilöä kuuluu tiettyyn ikäluokkaan tai johonkin alemmista ikäluokista. Viimeisen ikäluokan summafrekvenssiksi pitäisi tulla täsmälleen sama luku kuin työntekijöiden yhteismäärä, sillä varmasti jokainen kuuluu joko vanhimpaan tai johonkin nuoremmista ikäluokista. Sen jälkeen lasketaan summafrekvenssien suhteelliset osuudet koko henkilöstön määrästä. Huomataan, että 57 % työntekijöistä kuuluu 41-45 vuotiaiden ikäluokkaan tai johonkin sitä nuoremmista ikäluokista. Se on siis iän mediaaniluokka.</p>
 <p><img alt="Mediaanin laskeminen, 1" src="_images/mediaani1.png" /></p>
 <p><img alt="Mediaanin laskeminen, 2" src="_images/mediaani2.png" /></p>
 </section>
@@ -614,7 +652,7 @@ title="Print to PDF"
   
     By LUMA-tiimi, Lapin AMK / Minna Korhonen<br/>
   
-      &copy; Copyright 2022.<br/>
+      &copy; Copyright 2023.<br/>
 </p>
         </footer>
     </div>

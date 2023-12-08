@@ -1,10 +1,12 @@
 # Lineaarinen malli
 
-Lineaarinen malli tarkoittaa suoran yhtälöä $y=ax+b$, missä kulmakerroin $a$ kuvaa suoran jyrkkyyttä, ja leikkausvakio $b$ on muuttujan arvoa $0$ vastaava funktion arvo. Laskentaohjelmilla tai matriisilaskennan keinoin voidaan etsiä kertoimet $a$ ja $b$ siten, että datapisteiden ja mallin antamien lukujen etäisyyksien toisten potenssien summa on mahdollisimman pieni. Puhutaankin pienimmän neliösumman (PNS) sovituksesta. Pienimmän neliösumman periaate on esitetty seuraavassa kuvassa.
+Lineaarinen malli tarkoittaa suoran yhtälöä $y=ax+b$, missä kulmakerroin $a$ kuvaa suoran jyrkkyyttä, ja leikkausvakio $b$ on muuttujan arvoa $0$ vastaava funktion arvo. Laskentaohjelmilla voidaan etsiä kertoimet $a$ ja $b$ siten, että datapisteiden ja mallin antamien lukujen etäisyyksien toisten potenssien summa on mahdollisimman pieni. Puhutaankin pienimmän neliösumman (PNS) sovituksesta. Pienimmän neliösumman periaate on esitetty seuraavassa kuvassa.
 
 ![Pienin neliösumma](lineaarinen1.png "Pienin neliösumma")
 
 Kuva: [Krishnavedala - Own work](https://commons.wikimedia.org/w/index.php?curid=15462765), CC BY-SA 3.0
+
+PNS-sovitus onnistuu tietokoneilta näppärästi matriisilaskennan avulla. Tarkemmin menetelmästä on kerrottu esimerkiksi [täällä](https://luma-lapinamk.github.io/minna-diffint/pns_sovitus.html). Menetelmässä minimoidaan oikeiden pisteiden ja suoran pisteiden etäisyyksien neliöiden summaa differentiaalilaskennan avulla. Differentiaalilaskenta yleensäkin soveltuu ongelmiin, joissa halutaan löytää jonkin asian pienin (tai suurin) mahdollinen arvo. Differentiaalilaskennan laskutoimituksista muodostuu yhtälöpari, jossa tuntemattomina ovat suoran vakiot $a$ ja $b$, ja muut luvut lasketaan datapisteistä. Yhtälöparin tietokone puolestaan ratkaisee helposti matriisiyhtälönä, vaikka esimerkiksi Excelin käyttäjä ei itse näitä laskutoimenpiteitä näe.
 
 Lineaariselle mallille voidaan laskea ns. selityskerroin $R^2$. Se on lukujen 0 ja 1 välillä. Mitä korkeampi on selityskerroin, sitä luotettavammin voidaan sanoa, että muuttujat $x$ ja $y$ ovat lineaarisessa suhteessa toisiinsa. Selityskerroin on ns. korrelaatiokertoimen $R$ toinen potenssi. Korrelaatiokerroin voi saada arvoja lukujen -1 ja 1 väliltä. Luvun itseisarvo kertoo siitä, missä määrin datapisteet $x$ ja $y$ riippuvaisia toisistaan, ja luvun etumerkki kertoo, kasvavatko luvut yhtä aikaa vai kasvaako toinen luku, kun toinen pienenee.
 
