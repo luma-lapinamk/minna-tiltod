@@ -156,7 +156,7 @@ Bayes'n teoreema on hyödyllinen esimerkiksi lääketieteellisessä tutkimuksess
  
 $P(A│B)=\frac{P(B│A)\cdot P(A)}{P(B│A)\cdot P(A)+P(B│A^C)\cdot P(A^C)}$
 
-**Esim.** Oletetaan, että erässä urheilukilpailussa 0.2 % osallistuja käyttää dopingia. Aineiden käyttöä testataan verikokeella. Jos veressä on testattavaa ainetta, saadaan 99 % todennäköisyydellä positiivinen tulos. Testi on kuitenkin hieman epävarma siten, että positiisen tuloksen voi saada 5 % todennäköisyydellä, vaikka veressä ei olisi testattavaa ainetta. Millä todennäköisyydellä henkilö, joka saa positiivisen testituloksen, käyttää kiellettyä ainetta? 
+**Esim.** Oletetaan, että eräässä urheilukilpailussa 0.2 % osallistujista käyttää dopingia. Aineiden käyttöä testataan verikokeella. Jos veressä on testattavaa ainetta, saadaan 99 % todennäköisyydellä positiivinen tulos. Testi on kuitenkin hieman epävarma siten, että positiivisen tuloksen voi saada 5 % todennäköisyydellä, vaikka veressä ei olisi testattavaa ainetta. Millä todennäköisyydellä henkilö, joka saa positiivisen testituloksen, käyttää kiellettyä ainetta? 
 
 :::{admonition} Ratkaisu
 :class: tip, dropdown
