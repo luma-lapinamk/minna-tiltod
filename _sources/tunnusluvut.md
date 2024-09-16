@@ -75,7 +75,7 @@ Suoraan alkuperäisestä, luokittelemattomasta aineistosta laskettuna keskiarvok
 
 ## Moodi
 
-Moodi on aineiston tyypillisin, eli useimmin toistuva, muuttujan arvo. Moodi soveltuu sekä kvalitatiiviseen että kvantitatiiviseen aineistoon. Esimerkiksi jos kyselyssä "kyllä" -vastauksia saadaan 100 kpl, "ei" -vastauksia 50 kpl ja "en osaa sanoa" -vastauksia 90 kpl, niin moodi on "kyllä". Moodeja voi olla useampikin, jos useampaa muuttujan arvoa esiintyy aineistossa yhtä monta kertaa.
+Moodi eli tyyppiarvo on aineiston tyypillisin, eli useimmin toistuva, muuttujan arvo. Moodi soveltuu sekä kvalitatiiviseen että kvantitatiiviseen aineistoon. Esimerkiksi jos kyselyssä "kyllä" -vastauksia saadaan 100 kpl, "ei" -vastauksia 50 kpl ja "en osaa sanoa" -vastauksia 90 kpl, niin moodi on "kyllä". Moodeja voi olla useampikin, jos useampaa muuttujan arvoa esiintyy aineistossa yhtä monta kertaa.
 
 Jos aineisto on esitetty frekvenssitaulukkona eli tiettyä muuttujaa vastaavien havaintojen määränä, moodi nähdään aineistosta suoraan – sehän on se muuttujan arvo, jonka frekvenssi on suurin. Jos taas havainnot on esitetty listana tai taulukkona, voidaan käyttää Excelissä funktiota MOODI (MODE).
 

@@ -2,13 +2,13 @@
 
 Polynomimalleissa dataan sovitettu funktio on muotoa $y=a_0+a_1 x+a_2 x^2+a_3 x^3+ \ldots + a_n x^n$.
 
-Kun otetaan mukaan tarpeeksi $x$:n potensseja, malli saadaan sopimaan lähes täydellisesti melkein millaiseen tahansa dataan. Tällainen malli ei kuitenkaan yleensä ole tarkoituksenmukainen. Excelissä polynomimallin sovitus tehdään kuvaajan ja trendiviiva-toiminnon avulla. Keskitytään tässä vain toisen asteen polynomimalliin, joka voidaan esittää myös muodossa $y=ax^2+bx+c$.
+Kun otetaan mukaan tarpeeksi $x$:n potensseja, malli saadaan sopimaan lähes täydellisesti melkein millaiseen tahansa dataan. Tällainen malli ei kuitenkaan yleensä ole tarkoituksenmukainen. Excelissä polynomimallin sovitus voidaan tehdä kuvaajan ja trendiviiva-toiminnon avulla. Keskitytään tässä vain toisen asteen polynomimalliin, joka voidaan esittää myös muodossa $y=ax^2+bx+c$.
 
 Toisen asteen polynomifunktion kuvaaja on ylöspäin aukeava ("kuoppa"), jos $a>0$, ja alaspäin aukeava ("mäki"), jos $a<0$. Ylöspäin aukeavalle kuvaajalle voidaan laskea minimikohta ja vastaava minimiarvo; alaspäin aukeavalle taas voidaan laskea maksimikohta ja vastaava maksimiarvo. Kummassakin tapauksessa ääriarvokohta löytyy laskemalla 
 
 $x=-\frac{b}{2a}$
 
-ja vastaava ääriarvo saadaan sijoittamalla kyseinen $x$:n arvo funktion yhtälöön. 
+ja vastaava ääriarvo saadaan sijoittamalla kyseinen $x$:n arvo funktion yhtälöön. Ääriarvojen laskenta on perusteltavissa joko [differentiaalilaskennan](https://luma-lapinamk.github.io/minna-diffint/aariarvot.html) avulla tai toisen asteen polynomifunktion [lauseketta](https://luma-lapinamk.github.io/minna-agt/toisenasteen.html) hyödyntämällä.
 
 Seuraavan kuvan esimerkissä maksimikohta on yhtälön mukaan 
 

@@ -104,7 +104,7 @@ Excel: NORMAALI.JAKAUMA(200;180,7;7,4;1)-NORMAALI.JAKAUMA(190;180,7;7,4;1), vast
 
 ## Noudattaako aineisto normaalijakaumaa?
 
-Jos aineisto ei noudata normaalijakaumaa, niin ei voida käyttää normaalijakaumaan liittyviä funktioita. Muuttujan arvo, joka vastaa haluttua prosenttilukemaa, pitää tällöin etsiä PROSENTTIPISTE-funktiolla, jota on käsitelty jo aiemmin.
+Jos aineisto ei noudata normaalijakaumaa, niin ei voida käyttää normaalijakaumaan liittyviä funktioita. Muuttujan arvo, joka vastaa haluttua prosenttilukemaa, voidaan tällöin etsiä PROSENTTIPISTE-funktiolla, jota on käsitelty jo aiemmin.
 
 **Esim.** Eräs sepelimurske on kelvollista käyttötarkoitukseensa, jos enintään 2.5 % sen kivistä ylittää maksimiläpimitaltaan arvon 30 mm. Alla olevassa taulukossa on satunnaisesti valittujen 80 kivenkappaleen maksimiläpimitat työntömitalla mitattuna. Täyttääkö murske laatukriteerin? Ratkaise tehtävä kahdella tavalla:
 

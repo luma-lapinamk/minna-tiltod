@@ -4,7 +4,7 @@ Jatkuvissa todennäköisyysjakaumissa muuttuja voi saada hyvin paljon erilaisia 
 
 Jatkuvan jakauman todennäköisyysfunktio $f(x)$ ei koostu erillisistä pylväistä kuten diskreetin jakauman todennäköisyysfunktio, vaan sen kuvaaja on jatkuva. Funktion avulla tapahtumien todennäköisyyksiä lasketaan kuvaajan ja $x$-akselin rajoittaman alueen pinta-alana. Pinta-alat lasketaan integroimalla. Taulukkolaskentaohjelmissa on valmiit funktiot jatkuvien jakamien käsittelyyn.
  
-Tiheysfunktio voi olla matemaattiselta muodoltaan millainen tahansa, mutta sen pitää toteuttaa seuraavat ehdot:
+Tiheysfunktio voi olla matemaattiselta muodoltaan periaatteessa millainen tahansa, mutta sen pitää toteuttaa seuraavat ehdot:
 
 1. $f(x) \geq 0$ kaikilla arvoilla $x$, sillä minkään tapahtuman todennäköisyys ei voi olla pienempi kuin 0
 

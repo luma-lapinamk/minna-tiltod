@@ -4,9 +4,12 @@ Aiemmin on jo todettu, että kun havainnoitava perusjoukko eli populaatio on hyv
 
 Tilastotieteessä pätevät seuraavat säännöt: 
 
-1. Jos populaatiosta, jonka mitatut arvot voivat olla miten tahansa jakautuneet, otetaan kaikki mahdolliset osajoukkojen kombinaatiot ja lasketaan näiden osajoukkojen keskiarvojen keskiarvo, se on aina sama kuin populaation keskiarvo, vaikka yhden osajoukon keskiarvo voi erota siitä hyvinkin suuresti. 
+1. Jos populaatiosta, jonka mitatut arvot voivat olla miten tahansa jakautuneet, otetaan kaikki mahdolliset osajoukkojen kombinaatiot ja lasketaan näiden osajoukkojen keskiarvojen keskiarvo, se on aina sama kuin populaation keskiarvo, vaikka yhden osajoukon keskiarvo voi erota siitä hyvinkin suuresti.
 
 2. Riippumattomasti valittujen otosten keskiarvojen $\mu_i$ muodostama jakauma on normaalisti jakautunut riippumatta siitä, onko populaatiossa kyseinen ominaisuus normaalisti jakautunut vai ei.
+
+Kuvitellaan esimerkiksi, että peruskoulun 9. luokalla on rinnakkaisluokat A-F. Mittaamalla kaikkien oppilaiden pituus voitaisiin todeta, että kaikkien oppilaiden pituuden keskiarvo on 175 cm. Periaatteessa sama tulos saataisiin myös mittaamalla erikseen luokkien A, B, ... , F oppilaiden pituuksien keskiarvot. Nämä keskiarvot eivät välttämättä ole keskenään samat, eivätkä myöskään samat kuin kaikkien luokan oppilaiden pituuden keskiarvo. Esimerkiksi luokan A oppilaiden pituuden keskiarvo saattaisi olla 170 cm ja luokan B oppilaiden 180  cm. Kuitenkin näiden keskiarvojen keskiarvon oletetaan tilastotieteessä olevan sama 175 cm kuin koko ikäluokasta laskettu keskiarvo.
+
 
 ## Keskeinen raja-arvolause
 
@@ -48,7 +51,7 @@ Keskiarvon keskivirhe on $\frac{\sigma}{\sqrt{n}}=\frac{22.6~\text{g}}{\sqrt{10}
 
 Keskipaino on siis $\mu=\bar{X} \pm \frac{\sigma}{\sqrt{n}} = 995~\text{g} \pm 7~\text{g}$.
 
-Luottamusväli on noin 988 g ... 1002 g.
+Keskiarvon luottamusväli on noin 988 g ... 1002 g.
 
 :::
  

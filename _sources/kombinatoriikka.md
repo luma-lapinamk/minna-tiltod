@@ -6,6 +6,8 @@ Kombinatoriikka tarkastelee sitä, kuinka monella tavalla ja kuinka monessa eri 
 
 Permutaatio on tietyssä järjestyksessä oleva alkioiden joukko, esimerkiksi ruokalaan tietyn ryhmän opiskelijoista muodostuva jono. Mukaan otetaan kaikki kyseisen joukon alkiot eli esimerkin tapauksessa henkilöt. Jos joukossa on $n$ alkiota, niin mahdollisia permutaatioita on $n!$ kappaletta, missä huutomerkki tarkoittaa kertomaa eli tuloa, jossa on mukana luku $n$ ja kaikki sitä pienemmät positiiviset kokonaisluvut. Esimerkiksi luvun $4$ kertoma on $4!=4\cdot 3\cdot 2 \cdot 1 =24$.
 
+Jonon muodostuksen tapauksessa luvut, jotka muodostavat kertoman, vastaavat sitä kuinka monta vaihtoehtoa jonoon saapuville henkilöille on olemassa. Jos ryhmässä on neljä henkilöä, niin kuka tahansa heistä voi mennä jonon ensimmäiseksi. Seuraavalle paikalle tulee joku kolmesta muusta, seuraavalle paikalle on jäljellä kaksi vaihtoehtoa, ja viimeiselle paikalle jää tietenkin vain yksi mahdollinen henkilö.
+
 Yleisesti laskukaava on
 
 $n!=n\cdot (n-1)\cdot (n-2)\cdot \ldots \cdot 1$
@@ -23,7 +25,15 @@ $12!=12\cdot 11\cdot \ldots \cdot 2\cdot 1=479 001 600$
 
 ## k-permutaatio
 
-On mahdollista, että $n$ alkion joukosta valitaankin vain $k$:n alkion joukko. Esimerkiksi ruokajonoon meneekin vain osa ryhmän jäsenistä. Aluksi tarkastellaan tilannetta, jossa alkioiden järjestyksellä on merkitystä. Tällaiset järjestetyt osajoukot ovat nimeltään $k$-permutaatioita. Jos joukossa on $n$ alkiota, niin mahdollisten $k$-permutaatioiden määrä on
+On mahdollista, että $n$ alkion joukosta valitaankin vain $k$:n alkion joukko. Esimerkiksi ruokajonoon meneekin vain osa ryhmän jäsenistä. Aluksi tarkastellaan tilannetta, jossa alkioiden järjestyksellä on merkitystä. Tällaiset järjestetyt osajoukot ovat nimeltään $k$-permutaatioita. Periaate on sama kuin edellä: esimerkiksi 8 henkilön ryhmästä ensimmäiselle paikalle on 8 vaihtoehtoa, toiselle 7, kolmannelle 6, ja niin edelleen. Kertolasku vain täytyy katkaista sopivasta kohdasta. Jos syömään lähtijöitä 8 henkilöstä olisi vain 3, niin mahdollisia järjestyksiä olisi \(8\cdot 7 \cdot 6\).
+
+Matemaattisesti kertolaskun katkaisu onnistuu siten, että kertolasku muutetaan murtolausekkeeksi, jossa osoittajassa kertolaskua jatketaan numeroon 1 saakka kertoman määritelmän mukaisesti, ja nimittäjään kirjoitetaan sopiva kertolasku jolla yläpuolen kertolasku kumoutuu. Näin saadaan katkaistu kertolasku esitettyä kahden kertoman osamääränä.
+
+Esimerkki:
+
+$(8\cdot 7 \cdot 6 = frac{8 \cdot 7 \cdot 6 \cdot 5 \cdot 4 \cdot 3 \cdot 2 \cdot 1}{5 \cdot 4 \cdot 3 \cdot 2 \cdot 1}=\frac{8!}{5!}$
+
+Yleisesti jos joukossa on $n$ alkiota, niin mahdollisten $k$-permutaatioiden määrä on
 
 $n(n-1)\cdot \ldots \cdot (n-k+1)=\frac{n!}{(n-k)!}$
 
@@ -40,7 +50,9 @@ $\frac{12!}{(12-3)!}=\frac{12!}{9!}=\frac{12\cdot 11 \cdot \ldots \cdot 2\cdot 1
 
 ## k-kombinaatio 
 
-Kun $n$ alkion joukosta valitaan $k$:n alkion joukko, jossa alkioiden järjestyksellä ei ole merkitystä, kyse on $k$-kombinaatiosta. Tällöin ei siis olla jonossa, vaan vapaamuotoisessa porukassa. Jos joukossa on $n$ alkiota, niin mahdollisten $k$-kombinaatioiden määrä on
+Kun $n$ alkion joukosta valitaan $k$:n alkion joukko, jossa alkioiden järjestyksellä ei ole merkitystä, kyse on $k$-kombinaatiosta. Tällöin ei siis olla jonossa, vaan vapaamuotoisessa porukassa. Näin ollen joukkojen määrä lasketaan siten, että edellisessä tapauksessa laskettujen järjestettyjen osajoukkojen määrä jaetaan sillä, kuinka monta erilaista jonoa joukosta on mahdollista muodostaa, eli osajoukon koon $k$ kertomalla.
+
+Jos joukossa on $n$ alkiota, niin mahdollisten $k$-kombinaatioiden määrä on siis
 
 $\frac{n!}{k!(n-k)!}$
 
@@ -99,7 +111,6 @@ c) Laske todennäköisyydet Loton pienemmille voitoille: 6, 5 ja 4 oikein.
 a) Lukujen järjestyksellä ei ole väliä, joten kyseessä on 7-kombinaatio $\binom{40}{7}$.
 
 Excel: =KOMBINAATIO (40;7), vastaus 18 643 560
-
 
 b) Rivejä, joissa on 7 oikeaa lukua, on vain yksi, joten 
 

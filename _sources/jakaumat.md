@@ -12,7 +12,7 @@ Jakauma on diskreetti, jos tilastomuuttuja voi saada vain rajallisen määrän a
 
 ## Jatkuvat jakaumat
 
-Jakauma on jatkuva, jos tilastollinen muuttuja voi saada mitä tahansa arvoja tietyltä väliltä. Mahdollisuuksia on periaatteessa ääretön määrä, mutta käytännössä mittaustarkkuus rajoittaa mahdollisia muuttujien arvoja. Tällaisia muuttujia ovat esimerkiksi ihmisen massa, keihäänheiton tulos ja etäisyys kotoa työpaikalle. Muuttujien arvojen jakauma voidaan muodostaa jakamalla arvot sopiviin luokkiin.
+Jakauma on jatkuva, jos tilastollinen muuttuja voi saada mitä tahansa arvoja tietyltä väliltä. Mahdollisuuksia on periaatteessa ääretön määrä, mutta käytännössä mittaustarkkuus rajoittaa mahdollisia muuttujien arvoja. Tällaisia muuttujia ovat esimerkiksi ihmisen massa, keihäänheiton tulos, ja etäisyys kotoa työpaikalle. Muuttujien arvojen jakauma voidaan muodostaa jakamalla arvot sopiviin luokkiin.
 
 **Esim.** Testattiin 30 henkilön reaktioaikaa. Mittaus tehtiin mikrosekunnin tarkkuudella. Tulokset ovat ensimmäisessä taulukossa. Tulokset on järkevää esittää sopivasti luokiteltuna, kuten jälkimmäisessä frekvenssitaulukossa. Frekvenssitaulukon voi esittää pylväskaaviona.
 

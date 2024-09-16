@@ -14,11 +14,13 @@ Todennäköisyyslaskentaan liittyy läheisesti matematiikan osa-alue, jonka nimi
  
 ## Klassinen todennäköisyys
 
-Klassista todennäköisyyslaskentaa sovelletaan tapahtumiin, jotka ovat yhtä todennäköisiä. Esimerkiksi noppaa heitettäessä mikä tahansa silmäluku väliltä 1...6 saadaan samalla todennäköisyydellä. Tietyn tapahtuman $A$ klassinen todennäköisyys $P(A)$ on kyseiselle tapahtumalle suotuisten tapauksien määrä $f$ jaettuna kaikkien mahdollisten tapahtumien määrällä $n$, siis
+Todennäköisyyslaskentaan liittyvät käsitteet *alkeistapaus* ja *suotuisa alkeistapaus*. Esimerkiksi nopanheiton erilaisia alkeistapauksia ovat silmäluvut 1, 2, 3, 4, 5 ja 6. Ne kaikki ovat yhtä todennäköisiä. Jos tarkastellaan todennäköisyyttä saada parillinen silmäluku, niin suotuisia alkeistapauksia ovat silmäluvut 2, 4 ja 6. Nopanheiton lopputulos on todennäköisyyslaskennan mielessä *tapahtuma*. Tietyn tapahtuman $A$ klassinen todennäköisyys $P(A)$ on kyseiselle tapahtumalle suotuisten tapauksien määrä $f$ jaettuna kaikkien mahdollisten alkeistapausten määrällä $n$, siis
 
-$P(A)=\frac{f}{n}$.
+$P(A)=\frac{f}{n}$
 
-Minkä tahansa tapahtuman todennäköisyys on lukujen 0 (mahdoton) ja 1 (varma) välillä. Se ilmaistaan prosenttilukuna tai desimaalilukuna. Kun käytetään erilaisia monimutkaisempiin tilanteisiin liittyviä todennäköisyyden laskusääntöjä, kannattaa aina lopuksi tarkistaa, että tulos on  varmasti sallitulla välillä!
+Toisin sanoen tapahtuman $A$, jota voidaan käyttää lyhennysmerkintänä ilmaukselle "saadaan parillinen silmäluku", todennäköisyys on $P(A)\frac{3}{6}=0.5 = 50 %$.
+
+Minkä tahansa tapahtuman todennäköisyys on lukujen 0 (mahdoton) ja 1 (varma) välillä. Se ilmaistaan prosenttilukuna tai desimaalilukuna. Kun myöhemmin käytetään erilaisia monimutkaisempiin tilanteisiin liittyviä todennäköisyyden laskusääntöjä, kannattaa aina lopuksi tarkistaa, että tulos on  varmasti sallitulla välillä!
 
 **Esim.** Laatikossa on 4 sinistä, 1 keltainen ja 3 punaista palloa. Laatikosta nostetaan yksi pallo. 
 Mikä on todennäköisyys sille, että pallo on a) sininen, b) keltainen, c) punainen? 
@@ -56,7 +58,7 @@ Siis $P(\text{summa ainakin 10})=\frac{6}{36}=16.7 \%$
 
 ## Tilastollinen todennäköisyys
 
-Tilastollinen todennäköisyys tarkoittaa tietyn tapahtuman esiintymisen lukumäärää $f$ jaettuna kaikkien tapahtumien määrällä $n$. Tarkemmin määriteltynä tapahtuman $A$ tilastollinen todennäköisyys $P(A)$ on tapahtuman $A$ suhteellisen frekvenssin raja-arvo, jota lähestytään, kun satunnaista koetta toistetaan äärettömän monta kertaa.
+Tilastollinen todennäköisyys tarkoittaa tietyn tapahtuman esiintymisen lukumäärää $f$ jaettuna kaikkien tapahtumien määrällä $n$. Tarkemmin määriteltynä tapahtuman $A$ tilastollinen todennäköisyys $P(A)$ on tapahtuman $A$ suhteellisen frekvenssin raja-arvo, jota lähestytään, kun satunnaista koetta toistetaan äärettömän monta kertaa. Tilastollinen todennäköisyys liittyy klassiseen todennäköisyyteen sillä tavalla, että kun esimerkiksi nopanheittoa toistaa riittävän monesti, pitäisi esimerkiksi kuutosia saada klassisen todennäköisyyslaskennan mukainen osuus eli noin 17 %.
 
 Tilastollista todennäköisyyttä hyödyntävät mm. vakuutusyhtiöt määrittäessään vakuutusmaksun suuruutta sekä autonvalmistajat määrittäessään takuuaikaa. 
 

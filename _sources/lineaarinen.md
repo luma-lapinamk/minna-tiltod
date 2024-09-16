@@ -22,8 +22,4 @@ Korrelaatiokertoimeksi saadaan Excelillä -0.07. Sekä korrelaatiokerroin että 
  
 ![Lineaarinen malli, esim. 2](lineaarinen3.png "Lineaarinen malli, esim. 2")
 
-Korrelaatiokertoimen arvo reagoi hyvin herkästi havaintoarvoihin, jotka poikkeavat joko $x$- tai $y$ -arvoltaan suuresti muusta aineistosta. Tällöin pitää harkita, pitäisikö poikkeavat arvot poistaa aineistosta, tai onko aineisto muutenkaan käyttökelpoista. Ehkä kahvin ja alkoholin kulutuksen yhteyskin vahvistuisi, jos Libanon jätettäisiin tarkastelun ulkopuolelle.
-
-Seuraavassa kuvassa on muuten keskenään sama aineisto, mutta oikeanpuoleisesta kuvasta on poistettu ne pisteet, jotka on vasemmanpuoleisessa kuvassa rengastettu punaisella. Kuvaajissa $x$-akselin arvot ovat lumisateen voimakkuuksia (mm/h) ja ja $y$-akselin arvot kuvaavat sitä, miten lumisade vaimentaa mm. auton havaintolaitteissa käytettävän infrapunasäteilyn kulkua. Suoran yhtälö ja selityskerroin muuttuvat huomattavasti, kun datasta poistetaan poikkeuksellisen voimakkaat lumipyryt. Data on peräisin [WinterSim](https://wintersim.fi/)-hankkeesta. 
-
-![Lineaarinen malli, esim. 3](lineaarinen4.png "Lineaarinen malli, esim. 3")
+Korrelaatiokertoimen arvo reagoi hyvin herkästi havaintoarvoihin, jotka poikkeavat joko $x$- tai $y$ -arvoltaan suuresti muusta aineistosta. Tällöin pitää harkita, pitäisikö poikkeavat arvot poistaa aineistosta, tai onko aineisto muutenkaan käyttökelpoista. Ehkä kahvin ja alkoholin kulutuksen yhteyskin vahvistuisi, jos Libanon jätettäisiin tarkastelun ulkopuolelle. Tällaisten pisteiden tunnistamiseen on useita eri menetelmiä, joihin ei tässä perehdytä. Useassa menetelmässä oleellista on, että lineaarinen malli lasketaan ensin kaikesta aineistosta, ja sitten jälkikäteen tarkastellaan, miten malli muuttuu jos jokin muista erottuva piste poistetaan - ja sitten tehdään uusi malli siistityllä aineistolla.

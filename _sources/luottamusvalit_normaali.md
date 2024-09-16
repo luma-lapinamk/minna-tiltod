@@ -2,7 +2,7 @@
 
 Virhemarginaaleja voidaan usein, mutta ei aina, laskea normaalijakauman avulla. Lasku voidaan tehdä, jos otoskoko on riittävän suuri (vähintään 30) tai jos tiedetään, mikä on populaation mitattavan ominaisuuden todellinen keskihajonta.
 
-Oletetaan, että otoskeskiarvo noudattaa normaalijakaumaa $N\left(\mu,\frac{σ}{\sqrt{n}}\right)$. Tällaisesta jakaumasta esimerkiksi 95 % luottamustason mukaisen välin saa etsimällä keskiarvon molemmin puolin symmetrisesti rajat, joiden välillä on 95 % jakauman käyrän ja vaaka-akselin pinta-alasta. Tällöin siis alarajan vasemmalle puolelle ja ylärajan oikealle puolelle jää yhteensä 5 % pinta-alasta.
+Oletetaan, että otoskeskiarvo noudattaa normaalijakaumaa $N\left(\mu,\frac{\sigma}{\sqrt{n}}\right)$. Tällaisesta jakaumasta esimerkiksi 95 % luottamustason mukaisen välin saa etsimällä keskiarvon molemmin puolin symmetrisesti rajat, joiden välillä on 95 % jakauman käyrän ja vaaka-akselin pinta-alasta. Tällöin siis alarajan vasemmalle puolelle ja ylärajan oikealle puolelle jää yhteensä 5 % pinta-alasta.
 
 Koska jakauma on symmetrinen, niin kumpaakin päähän jäävä alue on puolet tästä eli 2.5 %. Niinpä virhemarginaali $\Delta$ on normaalijakauman $N\left(\mu,\frac{σ}{\sqrt{n}}\right)$ pinta-alaa 0.975 vastaavan muuttujan $X$ arvon ja otoskeskiarvon erotus.
  

@@ -15,4 +15,5 @@ Kirjassa esiintyvät matemaattiset merkinnät saa näkymään suurempana (ainaki
 
 Kokeile esimerkiksi tällä kaavalla: $f(x)=\frac{3x^2+4x+5}{2x^3+7x-3}$
 
-Materiaalin on tehnyt Lapin AMK:n LUMA-tiimi. Materiaali täydentyy vielä! Kaikki LUMA-tiimin tekemät sähköiset oppimateriaalit löytyvät [materiaalipankista](http://luma-lapinamk.pub).
+Materiaalin on tehnyt Lapin AMK:n LUMA-tiimi. Materiaali täydentyy jatkuvasti ja virheitä korjataan!
+Kaikki LUMA-tiimin tekemät sähköiset oppimateriaalit löytyvät [materiaalipankista](http://luma-lapinamk.pub).

@@ -4,7 +4,7 @@ Yleisesti eksponenttifunktio on muotoa $y=ab^x$. Jos $x$ kuvaa aikaa, niin kerro
 
 Jos $b<1$, funktio on vähenevä (arvot pienenevät, kun $x$ kasvaa) ja jos $b>1$, funktio on kasvava (arvot kasvavat, kun $x$ kasvaa). Eksponenttifunktion sovitus dataan onnistuu Excelin trendiviiva-toiminnolla.
 
-Uutisista tuttu ”eksponentiaalinen kasvu” liittyy juuri tähän funktioon. Tällaisella kasvulla on se ominaisuus, että mitä suurempi on tarkasteltava arvo, sitä nopeammin se kasvaa. Aluksi kasvu saattaa olla hyvin hidastakin. Esimerkiksi jos tutkitaan tarttuvaa tautia ja oletetaan, että aluksi sairastuneita on vain yksi ja että jokainen sairastunut tartuttaa taudin yhdessä aikayksikössä kahteen muuhun ihmiseen, niin tartuntamäärää hetkellä $x$ kuvaa malli $y=1\cdot 2^x$. Tämän mallin mukaiset tartuntamäärät kasvavat alla olevan taulukon mukaisesti. 
+Uutisistakin tuttu ”eksponentiaalinen kasvu” liittyy juuri tähän funktioon. Tällaisella kasvulla on se ominaisuus, että mitä suurempi on tarkasteltava arvo, sitä nopeammin se kasvaa. Aluksi kasvu saattaa olla hyvin hidastakin. Esimerkiksi jos tutkitaan tarttuvaa tautia ja oletetaan, että aluksi sairastuneita on vain yksi ja että jokainen sairastunut tartuttaa taudin yhdessä aikayksikössä kahteen muuhun ihmiseen, niin tartuntamäärää hetkellä $x$ kuvaa malli $y=1\cdot 2^x$. Tämän mallin mukaiset tartuntamäärät kasvavat alla olevan taulukon mukaisesti. 
 
 |$x$|0|2|4|6|8|10|12|14|16|
 |-|-|-|-|-|-|--|--|--|--|
